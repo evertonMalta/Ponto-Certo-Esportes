@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+
+    >
+
+    <group
+        android:checkableBehavior="single"
+        android:enabled="true">
+        <item
+            android:id="@+id/nav_clientes"
+            android:icon="@drawable/icon_clientes"
+            android:title="Clientes"
+
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/nav_fornecedores"
+            android:icon="@drawable/icon_fornecedores"
+            android:title="Fornecedor" />
+        <item
+            android:id="@+id/nav_funcionarios"
+            android:icon="@drawable/icon_funcionarios"
+            android:title="Funcionários" />
+        <item
+            android:id="@+id/nav_estoque"
+            android:icon="@drawable/icon_estoque"
+            android:title="Estoque" />
+        <item
+            android:id="@+id/nav_vendas"
+            android:icon="@drawable/icon_realizar_vendas"
+            android:title="Realizar Venda" />
+        <item
+            android:id="@+id/nav_custos"
+            android:icon="@drawable/icon_adicionar_custos"
+            android:title="Adicionar Custos" />
+        <item
+            android:id="@+id/nav_relatorios"
+            android:icon="@drawable/icon_relatorios"
+            android:title="Relatórios" />
+    </group>
+</menu>
