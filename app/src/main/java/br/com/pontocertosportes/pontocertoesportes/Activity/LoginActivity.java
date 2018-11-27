@@ -1,4 +1,4 @@
-package br.com.pontocertosportes.pontocertoesportes;
+package br.com.pontocertosportes.pontocertoesportes.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import br.com.pontocertosportes.pontocertoesportes.R;
 
 public class LoginActivity extends AppCompatActivity {
 

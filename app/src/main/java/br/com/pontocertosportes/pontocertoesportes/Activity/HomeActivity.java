@@ -1,12 +1,13 @@
-package br.com.pontocertosportes.pontocertoesportes;
+package br.com.pontocertosportes.pontocertoesportes.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import br.com.pontocertosportes.pontocertoesportes.R;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -25,11 +26,13 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        String nameUsuario = "ata";
+        String nameUsuario = "user";
         nameUserTextView = (TextView) findViewById(R.id.nameUser);
         nameUserTextView.setText(nameUsuario);
         imageUserImageView = findViewById(R.id.imageUser);
-        imageUserImageView.setImageResource(imagensIds[i]);
+        //imageUserImageView.setImageResource(imagensIds[i]);
+
+
     }
 
     @Override
@@ -63,7 +66,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void openProduto(View view){
-        Intent intent = new Intent(this, produto.class);
+        Intent intent = new Intent(this, ProductActivity.class);
         startActivity(intent);
 
     }

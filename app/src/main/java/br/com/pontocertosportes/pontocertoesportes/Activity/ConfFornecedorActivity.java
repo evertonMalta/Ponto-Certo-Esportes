@@ -1,15 +1,17 @@
-package br.com.pontocertosportes.pontocertoesportes;
+package br.com.pontocertosportes.pontocertoesportes.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class ConfFuncionarioActivity extends AppCompatActivity {
+import br.com.pontocertosportes.pontocertoesportes.R;
+
+public class ConfFornecedorActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_conf_funcionario);
+        setContentView(R.layout.activity_conf_fornecedor);
     }
 
     @Override
