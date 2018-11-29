@@ -16,4 +16,5 @@
     <string name="id">ID: </string>
     <string name="cpf">CPF: </string>
     <string name="categoria">Categoria: </string>
+    <string name="clientes">Clientes</string>
 </resources>

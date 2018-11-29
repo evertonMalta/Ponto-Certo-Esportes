@@ -33,7 +33,8 @@
         <activity android:name=".Activity.ConfClienteActivity" />
         <activity android:name=".Activity.HomeActivity" />
         <activity android:name=".Activity.ProductActivity" />
-        <activity android:name=".Activity.LoginActivity"></activity>
+        <activity android:name=".Activity.LoginActivity" />
+        <activity android:name=".Activity.ListClientsActivity"></activity>
     </application>
 
 </manifest>

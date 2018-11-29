@@ -23,7 +23,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
 
 
     public ProductAdapter(List<Product> list) {
-        this.listaProdutos=list;
+        this.listaProdutos = list;
     }
 
     @Override
@@ -43,7 +43,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
 
 
         holder.name.setText(product.getName());
-        holder.categoria.setText("CPF: "+product.getCategoria());
+        holder.categoria.setText("Categoria: "+product.getCategoria());
         holder.id.setText("ID: "+product.getID());
 
 
@@ -63,8 +63,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
             super(itemView);
 
             name = itemView.findViewById(R.id.listNameProduct);
-            categoria = itemView.findViewById(R.id.listPriceProduct);
-            id = itemView.findViewById(R.id.listQtdProduct);
+            categoria = itemView.findViewById(R.id.listCategoriaProduct);
+            id = itemView.findViewById(R.id.listIdProduct);
 
         }
     }

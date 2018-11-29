@@ -14,7 +14,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Produtos"
+        android:text="@string/clientes"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,7 +22,7 @@
 
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/ProductList"
+        android:id="@+id/ClientsList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="24dp"
@@ -34,7 +34,7 @@
     </android.support.v7.widget.RecyclerView>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/AddNewClientBtn"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_gravity="end|bottom"
