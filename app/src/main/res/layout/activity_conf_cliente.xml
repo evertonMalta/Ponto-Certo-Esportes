@@ -59,7 +59,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/allerstd"
-        android:text="cliente"
+        android:text="Cliente"
         android:textAllCaps="false"
         android:textColor="@android:color/black"
         android:textSize="36sp"

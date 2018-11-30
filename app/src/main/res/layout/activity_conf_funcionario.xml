@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.ConfFuncionarioActivity">
+    tools:context=".Activity.ConfFornecedorActivity">
 
     <!--Moldura Funcionario-->
 
     <ImageView
-        android:id="@+id/molduraIconFunc"
+        android:id="@+id/molduraIconForn"
         android:layout_width="119dp"
         android:layout_height="115dp"
         android:layout_marginStart="8dp"
@@ -28,7 +28,7 @@
     <!--Titulo da pagina -->
 
     <TextView
-        android:id="@+id/textTitlePageFuncionario"
+        android:id="@+id/textTitlePageFornecedor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -37,21 +37,21 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:fontFamily="@font/allerstd"
         android:text="adicionar novo"
         android:textColor="@color/colorPrimary"
-        android:textSize="15sp"
+        android:textSize="17sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/molduraIconFunc"
+        app:layout_constraintBottom_toTopOf="@+id/molduraIconForn"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.13999999" />
 
     <TextView
-        android:id="@+id/LblNomeFuncionarioText"
+        android:id="@+id/LblNomeFornecedorText"
         android:layout_width="wrap_content"
-        android:layout_height="42dp"
+        android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -59,13 +59,13 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/allerstd"
-        android:text="funcionário"
-        android:textAllCaps="false"
+        android:text="Fornecedor"
         android:textColor="@android:color/black"
+        android:textAllCaps="false"
         android:textSize="36sp"
         android:textStyle="bold"
         android:typeface="normal"
-        app:layout_constraintBottom_toTopOf="@+id/molduraIconFunc"
+        app:layout_constraintBottom_toTopOf="@+id/molduraIconForn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -79,38 +79,42 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="256dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="@font/allerstd"
         android:text="Nome"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/EditTextNomeFuncionario"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4" />
+        app:layout_constraintVertical_bias="0.39" />
 
 
     <EditText
-        android:id="@+id/EditTextNomeFuncionario"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginBottom="353dp"
+        android:id="@+id/EditTextNomeFornecedor"
+        android:layout_width="293dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/tbx_nome"
         android:fontFamily="@font/allerstd"
         android:src="@drawable/tbx_nome"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/LblNomeFuncionarioText"
-        app:layout_constraintStart_toStartOf="@+id/LblDescNome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LblDescNome"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/LblDescAniversario"
@@ -129,14 +133,14 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintHorizontal_bias="0.84"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.51" />
 
     <EditText
-        android:id="@+id/EditTextAniversarioFuncionario"
-        android:layout_width="104dp"
+        android:id="@+id/EditTextAniversarioFornecedor"
+        android:layout_width="121dp"
         android:layout_height="27dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -167,7 +171,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/allerstd"
-        android:text="Endereco"
+        android:text="Endereço"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -179,7 +183,7 @@
         app:layout_constraintVertical_bias="0.73" />
 
     <EditText
-        android:id="@+id/EditTextNumeroFuncionario"
+        android:id="@+id/EditTextNumeroFornecedor"
         android:layout_width="59dp"
         android:layout_height="27dp"
         android:layout_marginStart="8dp"
@@ -190,7 +194,7 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/tbx_num"
         android:fontFamily="@font/allerstd"
-        android:hint="numero"
+        android:hint="número"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -201,7 +205,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/EditTextRuaFuncionario"
+        android:id="@+id/EditTextRuaFornecedor"
         android:layout_width="152dp"
         android:layout_height="27dp"
         android:layout_marginStart="8dp"
@@ -223,7 +227,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/EditTextBairroFuncionario"
+        android:id="@+id/EditTextBairroFornecedor"
         android:layout_width="144dp"
         android:layout_height="27dp"
         android:layout_marginStart="8dp"
@@ -245,7 +249,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/EditTextCEPFuncionario"
+        android:id="@+id/EditTextCEPFornecedor"
         android:layout_width="113dp"
         android:layout_height="27dp"
         android:layout_marginStart="8dp"
@@ -267,7 +271,7 @@
         app:layout_constraintVertical_bias="0.3" />
 
     <EditText
-        android:id="@+id/EditTextCidadeFuncionario"
+        android:id="@+id/EditTextCidadeFornecedor"
         android:layout_width="132.5dp"
         android:layout_height="27dp"
         android:layout_marginStart="8dp"
@@ -289,7 +293,7 @@
         app:layout_constraintVertical_bias="0.3" />
 
     <EditText
-        android:id="@+id/EditTextEstadoFuncionario"
+        android:id="@+id/EditTextEstadoFornecedor"
         android:layout_width="94dp"
         android:layout_height="27dp"
         android:layout_marginStart="8dp"
@@ -408,20 +412,20 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/allerstd"
-        android:text="CPF"
+        android:text="CNPJ"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.51" />
 
     <EditText
-        android:id="@+id/EditTextCPFFuncionario"
-        android:layout_width="134dp"
+        android:id="@+id/EditTextCNPJFornecedor"
+        android:layout_width="187dp"
         android:layout_height="27dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -435,58 +439,16 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LblDescCNPJ"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/LblDescRG"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/allerstd"
-        android:text="RG"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.51" />
-
-    <EditText
-        android:id="@+id/EditTextRGFuncionario"
-        android:layout_width="111dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/tbx_rg"
-        android:fontFamily="@font/allerstd"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LblDescRG"
         app:layout_constraintVertical_bias="0.0" />
 
     <!--Divisoria do botao-->
 
     <!--botao Salvar e Cancelar-->
     <Button
-        android:id="@+id/btnSalvarCadastroFuncionario"
+        android:id="@+id/btnSalvarCadastroFornecedor"
         android:layout_width="128dp"
         android:layout_height="42.5dp"
         android:layout_marginStart="8dp"
@@ -506,7 +468,7 @@
         app:layout_constraintVertical_bias="0.98" />
 
     <Button
-        android:id="@+id/btnCancelarCadastroFuncionario"
+        android:id="@+id/btnCancelarCadastroFornecedor"
         android:layout_width="128dp"
         android:layout_height="42.5dp"
         android:layout_marginStart="8dp"
@@ -524,5 +486,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.98" />
+
 
 </android.support.constraint.ConstraintLayout>
