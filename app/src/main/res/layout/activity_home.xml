@@ -47,7 +47,7 @@
                     android:layout_width="110dp"
                     android:layout_height="110dp"
                     android:layout_margin="10dp"
-                    tools:srcCompat="@tools:sample/avatars[7]" />
+                    android:src="@drawable/futebol"/>
 
 
             </LinearLayout>
@@ -129,7 +129,6 @@
                 android:paddingRight="16dp">
 
                 <ImageView
-                    android:background="#123456"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:onClick="encerrarSessao"

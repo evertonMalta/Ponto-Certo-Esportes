@@ -5,11 +5,11 @@ import android.os.Bundle;
 
 import br.com.pontocertosportes.pontocertoesportes.R;
 
-public class EditProdutoActivity extends AppCompatActivity {
+public class ConfProductActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_produto);
+        setContentView(R.layout.activity_conf_product);
     }
 }
