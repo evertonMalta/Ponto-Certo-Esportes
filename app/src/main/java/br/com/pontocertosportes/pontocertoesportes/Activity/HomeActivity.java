@@ -46,7 +46,7 @@ public class HomeActivity extends AppCompatActivity {
     //functions open activity`s
 
     public void openCliente(View view){
-        Intent intent = new Intent(this, ConfClienteActivity.class);
+        Intent intent = new Intent(this, ListClientsActivity.class);
         startActivity(intent);
     }
 
@@ -66,7 +66,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void openProduto(View view){
-        Intent intent = new Intent(this, ProductActivity.class);
+        Intent intent = new Intent(this, ListProductActivity.class);
         startActivity(intent);
 
     }

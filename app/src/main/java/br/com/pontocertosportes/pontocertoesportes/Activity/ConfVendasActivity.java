@@ -1,15 +1,14 @@
 package br.com.pontocertosportes.pontocertoesportes.Activity;
 
+import br.com.pontocertosportes.pontocertoesportes.R;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import br.com.pontocertosportes.pontocertoesportes.R;
-
-public class EditProdutoActivity extends AppCompatActivity {
+public class ConfVendasActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_produto);
+        setContentView(R.layout.activity_conf_vendas);
     }
 }

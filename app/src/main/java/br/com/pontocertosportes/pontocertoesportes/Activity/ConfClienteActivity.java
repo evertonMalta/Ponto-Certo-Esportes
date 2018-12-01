@@ -4,15 +4,52 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.pontocertosportes.pontocertoesportes.Model.Clients;
 import br.com.pontocertosportes.pontocertoesportes.R;
 
 public class ConfClienteActivity extends AppCompatActivity {
 
+
+    EditText nomeClient;
+    EditText rgClient;
+    EditText cpfClient;
+    EditText aniversarioClient;
+    EditText emailClient;
+    EditText telefoneClient;
+    EditText ruaClient;
+    EditText numeroClient;
+    EditText cepClient;
+    EditText bairroClient;
+    EditText cidadeClient;
+    EditText estadoClient;
+
+    int id = 0;
+    private List<Clients> listaCliente = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_conf_cliente);
+
+        //declarando as EditTexts
+
+        nomeClient = (EditText) findViewById(R.id.EditTextNomeCliente);
+        rgClient = (EditText) findViewById(R.id.EditTextRGCliente);
+        cpfClient = (EditText) findViewById(R.id.EditTextCPFCliente);
+        aniversarioClient = (EditText) findViewById(R.id.EditTextAniversarioCliente);
+        emailClient = (EditText) findViewById(R.id.EditTextEmailCliente);
+        telefoneClient = (EditText) findViewById(R.id.EditTextTelefoneCliente);
+        ruaClient = (EditText) findViewById(R.id.EditTextRuaCliente);
+        numeroClient = (EditText) findViewById(R.id.EditTextNumeroCliente);
+        cepClient = (EditText) findViewById(R.id.EditTextCEPCliente);
+        bairroClient = (EditText) findViewById(R.id.EditTextBairroCliente);
+        cidadeClient = (EditText) findViewById(R.id.EditTextCidadeCliente);
+        estadoClient = (EditText) findViewById(R.id.EditTextEstadoCliente);
     }
 
     @Override
@@ -24,6 +61,9 @@ public class ConfClienteActivity extends AppCompatActivity {
 
     public void salvar(){
 
+        Clients client = new Clients(nomeClient.getText().toString(), cpfClient.getText().toString(),listaCliente.size(), rgClient.getText().toString(), aniversarioClient.getText().toString(), emailClient.getText().toString(), telefoneClient.getText().toString(),
+                                     ruaClient.getText().toString(), numeroClient.getText().toString(), cepClient.getText().toString(), bairroClient.getText().toString(), cidadeClient.getText().toString(), estadoClient.getText().toString());
+        this.listaCliente.add(client);
     }
 
     public void cancelar(View view){

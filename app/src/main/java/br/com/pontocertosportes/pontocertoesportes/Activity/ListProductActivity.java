@@ -41,20 +41,20 @@ public class ListProductActivity extends AppCompatActivity {
     }
 
     public void CriarProdutos(){
-        Product product = new Product("Julio Cesar","01","12345678988");
-        this.listaProdutos.add(product);
+        //Product product = new Product("Julio Cesar","01","12345678988");
+        //this.listaProdutos.add(product);
 
-        product = new Product("Fernando Fernandinho","02","54544848125");
-        this.listaProdutos.add(product);
+        //product = new Product("Fernando Fernandinho","02","54544848125");
+        //this.listaProdutos.add(product);
 
-        product = new Product("Ademir Damasciano","03","25541521533");
-        this.listaProdutos.add(product);
+        //product = new Product("Ademir Damasciano","03","25541521533");
+        //this.listaProdutos.add(product);
 
-        product = new Product("Julio Correia","04","25556123632");
-        this.listaProdutos.add(product);
+        //product = new Product("Julio Correia","04","25556123632");
+        //this.listaProdutos.add(product);
 
-        product = new Product("Felipe Smith","05","14523354888");
-        this.listaProdutos.add(product);
+        //product = new Product("Felipe Smith","05","14523354888");
+        //this.listaProdutos.add(product);
     }
 
 
