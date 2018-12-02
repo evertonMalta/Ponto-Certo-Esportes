@@ -39,10 +39,6 @@ public class ClientAdapter extends RecyclerView.Adapter<ClientAdapter.MyViewHold
         holder.name.setText(clients.getName());
         holder.cpf.setText("CPF: "+ clients.getCpf());
         holder.id.setText("ID: "+ clients.getId());
-
-
-
-
     }
 
     @Override
