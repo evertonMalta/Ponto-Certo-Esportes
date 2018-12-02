@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.ViewClientActivity">
+    tools:context=".Activity.ViewFuncionarioActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -16,7 +16,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:srcCompat="@drawable/moldura_imagem" />
@@ -29,29 +28,27 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/allerstd"
         android:text="nome do "
         android:textColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="104dp"
+        android:layout_width="165dp"
         android:layout_height="33dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:fontFamily="@font/allerstd"
-        android:text="Cliente"
+        android:text="Fornecedor"
         android:textColor="@android:color/black"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -59,17 +56,15 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/allerstd"
         android:text="Nome"
         android:textColor="@color/colorPrimary"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:layout_editor_absoluteX="16dp" />
 
     <TextView
-        android:id="@+id/nameTxtFuncionario"
+        android:id="@+id/nameTxtFornecedor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
@@ -81,30 +76,16 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
-        android:id="@+id/nameTxtProduct2"
+        android:id="@+id/CnpjTextFornecedor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
         android:fontFamily="@font/allerstd"
         android:text="123456789"
         android:textColor="@android:color/black"
-        app:layout_constraintStart_toEndOf="@+id/nameTxtFuncionario"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-    <TextView
-
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="100dp"
-        android:layout_marginRight="100dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/allerstd"
-        android:text="CPF"
-        android:textColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
         android:id="@+id/textVieaw4"
@@ -112,25 +93,12 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/allerstd"
         android:text="Telefone"
         android:textColor="@color/colorPrimary"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dateBuytxtProduct" />
-
-    <TextView
-        android:id="@+id/categoryTxtProduct"
-        android:layout_width="wrap_content"
-        android:layout_height="21dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
-        android:fontFamily="@font/allerstd"
-        android:text="123456789"
-        android:textColor="@android:color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
 
     <TextView
         android:id="@+id/categoryTxtProduct2"
@@ -148,28 +116,27 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/allerstd"
-        android:text="Aniversario"
+        android:text="Aniversário"
         android:textColor="@color/colorPrimary"
-        app:layout_constraintTop_toBottomOf="@+id/nameTxtFuncionario"
+        app:layout_constraintTop_toBottomOf="@+id/nameTxtFornecedor"
         tools:layout_editor_absoluteX="16dp" />
 
     <TextView
         android:id="@+id/dateBuytxtProduct"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
         android:fontFamily="@font/allerstd"
         android:text="01/01/1990"
         android:textColor="@android:color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        tools:layout_editor_absoluteX="16dp" />
 
     <TextView
         android:id="@+id/dateBuytxtProduct2"
         android:layout_width="wrap_content"
+        android:layout_height="20dp"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:fontFamily="@font/allerstd"
@@ -182,9 +149,9 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
-        android:layout_marginEnd="104dp"
-        android:layout_marginRight="104dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/allerstd"
         android:text="Endereço"
         android:textColor="@color/colorPrimary"
@@ -193,36 +160,36 @@
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="37dp"
-        android:layout_height="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
         android:layout_marginEnd="128dp"
         android:layout_marginRight="128dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/allerstd"
         android:text="Email"
         android:textColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/categoryTxtProduct" />
+        app:layout_constraintTop_toBottomOf="@+id/CnpjTextFornecedor" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginRight="128dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/allerstd"
-        android:text="RG"
+        android:text="CNPJ"
         android:textColor="@color/colorPrimary"
-        app:layout_constraintStart_toEndOf="@+id/nameTxtFuncionario"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/custtxtProduct2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:fontFamily="@font/allerstd"
         android:text="Av. Pres. Vargas 1010\nAlto da Boa Vista -\nRibeirão Preto - SP "
         android:textColor="@android:color/black"
@@ -231,27 +198,27 @@
 
     <Button
         android:id="@+id/removerBtnProduct"
-        android:layout_width="107dp"
-        android:layout_height="40dp"
+        android:layout_width="117dp"
+        android:layout_height="38dp"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:background="@drawable/tbx_estado"
         android:fontFamily="@font/allerstd"
-        android:text="Remover cliente"
+        android:text="Remover Fornecedor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/alterarBtnProduct"
-        android:layout_width="109dp"
-        android:layout_height="42dp"
+        android:layout_width="119dp"
+        android:layout_height="38dp"
         android:layout_marginBottom="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:background="@drawable/tbx_estado"
         android:fontFamily="@font/allerstd"
-        android:text="Alterar Cliente"
+        android:text="Alterar Fornecedor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
