@@ -1,13 +1,10 @@
 package br.com.pontocertosportes.pontocertoesportes.Adapter;
 
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.List;
 
@@ -29,22 +26,17 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemList = LayoutInflater.from(parent.getContext())
-                .inflate(adapter_list_product, parent , false);
+                .inflate(adapter_list_product, parent, false);
         return new MyViewHolder(itemList);
 
     }
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-
         Product product = listaProdutos.get(position);
-
-
-
-
         holder.name.setText(product.getName());
-        holder.categoria.setText("Categoria: "+product.getCategoria());
-        holder.id.setText("ID: "+product.getID());
+        holder.categoria.setText("Categoria: " + product.getCategoria());
+        holder.id.setText("ID: " + product.getID());
 
 
     }
@@ -54,12 +46,12 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
         return this.listaProdutos.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder{
+    public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView name;
-        TextView categoria ;
+        TextView categoria;
         TextView id;
 
-        public MyViewHolder( View itemView){
+        public MyViewHolder(View itemView) {
             super(itemView);
 
             name = itemView.findViewById(R.id.listNameProduct);
@@ -68,7 +60,6 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
 
         }
     }
-
 
 
 }
