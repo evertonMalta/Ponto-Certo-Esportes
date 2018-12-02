@@ -1,6 +1,7 @@
 package br.com.pontocertosportes.pontocertoesportes.Model;
 
-public class Clients extends Endereco{
+public class Funcionarios extends Endereco{
+
     private int id;
     private String name;
     private String cpf;
@@ -11,8 +12,7 @@ public class Clients extends Endereco{
 
     Endereco endereco = new Endereco();
 
-
-    public Clients( int id, String name, String cpf, String rg, String aniversario, String email, String telefone, String rua, String numero, String cep, String bairro, String cidade, String estado) {
+    public Funcionarios( int id, String name, String cpf, String rg, String aniversario, String email, String telefone, String rua, String numero, String cep, String bairro, String cidade, String estado) {
         super(rua, numero, cep, bairro, cidade, estado);
         this.id = id;
         this.name = name;
@@ -80,6 +80,7 @@ public class Clients extends Endereco{
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+
 
 
 

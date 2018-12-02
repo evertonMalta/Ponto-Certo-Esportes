@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.ViewClientActivity">
+    tools:context=".Activity.ViewFuncionarioActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -40,14 +40,14 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="104dp"
+        android:layout_width="165dp"
         android:layout_height="33dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/allerstd"
-        android:text="Cliente"
+        android:text="Funcionario"
         android:textColor="@android:color/black"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -150,7 +150,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/allerstd"
-        android:text="Aniversario"
+        android:text="Data Nascimento"
         android:textColor="@color/colorPrimary"
         app:layout_constraintTop_toBottomOf="@+id/nameTxtFuncionario"
         tools:layout_editor_absoluteX="16dp" />

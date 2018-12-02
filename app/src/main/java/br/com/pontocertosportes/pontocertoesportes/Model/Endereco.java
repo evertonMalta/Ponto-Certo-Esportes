@@ -1,6 +1,6 @@
 package br.com.pontocertosportes.pontocertoesportes.Model;
 
-public class Endereco {
+public class Endereco{
 
     private String rua;
     private String numero;
