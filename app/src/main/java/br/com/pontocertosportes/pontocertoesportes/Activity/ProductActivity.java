@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import br.com.pontocertosportes.pontocertoesportes.Adapter.ProductAdapter;
 import br.com.pontocertosportes.pontocertoesportes.R;
@@ -18,4 +19,6 @@ public class ProductActivity extends AppCompatActivity {
 
 
     }
+
+
 }
