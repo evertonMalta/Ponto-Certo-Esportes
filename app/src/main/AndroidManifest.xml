@@ -21,7 +21,7 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".Activity.LoginActivity"
+            android:name=".Activity.HomeActivity"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,7 +31,7 @@
         </activity>
         <activity android:name=".Activity.ConfFornecedorActivity" />
         <activity android:name=".Activity.ConfClienteActivity" />
-        <activity android:name=".Activity.HomeActivity" />
+        <activity android:name=".Activity.LoginActivity" />
         <activity android:name=".Activity.ProductActivity" />
         <activity android:name=".Activity.ListProductActivity" />
         <activity android:name=".Activity.ListClientsActivity" />

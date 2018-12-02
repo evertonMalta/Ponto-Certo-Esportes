@@ -11,6 +11,21 @@ public class Clients extends Endereco{
 
     Endereco endereco = new Endereco();
 
+    public Clients() {
+    }
+    public Clients( int id, String name, String cpf, String rg, String aniversario, String email, String telefone, String rua, String numero, String cep, String bairro, String cidade, String estado) {
+        super(rua, numero, cep, bairro, cidade, estado);
+        this.id = id;
+        this.name = name;
+        this.cpf = cpf;
+        this.rg = rg;
+        this.aniversario = aniversario;
+        this.email = email;
+        this.telefone = telefone;
+    }
+
+
+
     public int getId() {
         return id;
     }
@@ -67,19 +82,6 @@ public class Clients extends Endereco{
         this.telefone = telefone;
     }
 
-    public Clients(String name, String cpf, int id, String rg, String aniversario, String email, String telefone, String rua, String numero, String cep, String bairro, String cidade, String estado) {
-        this.id = id;
-        this.name = name;
-        this.cpf = cpf;
-        this.rg = rg;
-        this.aniversario = aniversario;
-        this.email = email;
-        this.telefone = telefone;
-        this.endereco.setRua(rua);
-        this.endereco.setNumero(numero);
-        this.endereco.setCep(cep);
-        this.endereco.setBairro(bairro);
-        this.endereco.setCidade(cidade);
-        this.endereco.setEstado(estado);
-    }
+
+
 }
