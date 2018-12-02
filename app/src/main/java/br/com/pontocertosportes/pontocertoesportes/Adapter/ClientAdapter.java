@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -35,20 +36,25 @@ public class ClientAdapter extends RecyclerView.Adapter<ClientAdapter.MyViewHold
     public void onBindViewHolder(MyViewHolder holder, int position) {
 
         Clients clients = listaClientes.get(position);
-
-
-
-
         holder.name.setText(clients.getName());
-        holder.cpf.setText("CPF: "+clients.getCpf());
-        holder.id.setText("ID: "+clients.getId());
+        holder.cpf.setText("CPF: "+ clients.getCpf());
+        holder.id.setText("ID: "+ clients.getId());
+
+
 
 
     }
 
     @Override
     public int getItemCount() {
-        return this.listaClientes.size();
+        try{
+            return this.listaClientes.size();
+        }catch (Exception e){
+            return 0;
+        }
+
+
+
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
