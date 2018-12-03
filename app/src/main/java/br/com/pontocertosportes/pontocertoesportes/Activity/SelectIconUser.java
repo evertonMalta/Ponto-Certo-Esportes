@@ -14,10 +14,15 @@ public class SelectIconUser extends AppCompatActivity {
         setContentView(R.layout.activity_select_icon_user);
     }
 
-
-
     public void choiceConfirm(View view){
         finish();
     }
 
+    public void selectImage(){
+
+    }
+
+    public void cancel(){
+
+    }
 }
