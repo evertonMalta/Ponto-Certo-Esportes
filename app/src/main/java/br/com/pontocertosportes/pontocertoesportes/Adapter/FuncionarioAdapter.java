@@ -12,8 +12,7 @@ import br.com.pontocertosportes.pontocertoesportes.Model.Clients;
 import br.com.pontocertosportes.pontocertoesportes.Model.Funcionarios;
 import br.com.pontocertosportes.pontocertoesportes.R;
 
-import static br.com.pontocertosportes.pontocertoesportes.R.layout.adapter_list_clients;
-import static br.com.pontocertosportes.pontocertoesportes.R.layout.adapter_list_funcionarios;
+
 
 public class FuncionarioAdapter extends RecyclerView.Adapter<FuncionarioAdapter.MyViewHolder> {
 
@@ -27,7 +26,7 @@ public class FuncionarioAdapter extends RecyclerView.Adapter<FuncionarioAdapter.
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemList = LayoutInflater.from(parent.getContext())
-                .inflate(adapter_list_funcionarios, parent , false);
+                .inflate(R.layout.adapter_list_funcionarios, parent , false);
         return new FuncionarioAdapter.MyViewHolder(itemList);
 
     }

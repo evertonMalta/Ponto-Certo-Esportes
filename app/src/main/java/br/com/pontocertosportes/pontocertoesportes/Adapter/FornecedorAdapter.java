@@ -12,8 +12,8 @@ import br.com.pontocertosportes.pontocertoesportes.Model.Fornecedores;
 import br.com.pontocertosportes.pontocertoesportes.Model.Funcionarios;
 import br.com.pontocertosportes.pontocertoesportes.R;
 
-import static br.com.pontocertosportes.pontocertoesportes.R.layout.adapter_list_fornecedores;
-import static br.com.pontocertosportes.pontocertoesportes.R.layout.adapter_list_funcionarios;
+
+import static br.com.pontocertosportes.pontocertoesportes.R.layout;
 
 public class FornecedorAdapter extends RecyclerView.Adapter<FornecedorAdapter.MyViewHolder> {
 
@@ -27,7 +27,7 @@ public class FornecedorAdapter extends RecyclerView.Adapter<FornecedorAdapter.My
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemList = LayoutInflater.from(parent.getContext())
-                .inflate(adapter_list_fornecedores, parent , false);
+                .inflate(R.layout.adapter_list_fornecedores, parent , false);
         return new FornecedorAdapter.MyViewHolder(itemList);
 
     }

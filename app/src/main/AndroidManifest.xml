@@ -32,13 +32,13 @@
         <activity android:name=".Activity.ConfFornecedorActivity" />
         <activity android:name=".Activity.ConfClienteActivity" />
         <activity android:name=".Activity.LoginActivity" />
-        <activity android:name=".Activity.ProductActivity" />
         <activity android:name=".Activity.ListProductActivity" />
         <activity android:name=".Activity.ListClientsActivity" />
         <activity android:name=".Activity.ViewClientActivity" />
         <activity android:name=".Activity.ViewProdutoActivity" />
         <activity android:name=".Activity.ConfEstoqueActivity" />
-        <activity android:name=".Activity.ConfProductActivity"></activity>
+        <activity android:name=".Activity.ConfProductActivity" />
+        <activity android:name=".Activity.SelectIconUser"></activity>
     </application>
 
 </manifest>

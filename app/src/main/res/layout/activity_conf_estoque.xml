@@ -43,10 +43,9 @@
         android:layout_height="115dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-<<<<<<< HEAD
-=======
+
         android:layout_marginTop="108dp"
->>>>>>> 5d130b1539b736c64bd58879af17189f703dc2b9
+
         app:layout_constraintEnd_toStartOf="@+id/editText3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,11 +61,10 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-<<<<<<< HEAD
-=======
+
         android:layout_marginBottom="8dp"
         android:hint="Descrição"
->>>>>>> 5d130b1539b736c64bd58879af17189f703dc2b9
+
         android:lines="3"
         android:minLines="3"
         android:textAlignment="gravity"
@@ -131,8 +129,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-<<<<<<< HEAD
-=======
+
         android:id="@+id/LblDescAniversario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -166,7 +163,7 @@
         tools:layout_editor_absoluteY="308dp" />
 
     <TextView
->>>>>>> 5d130b1539b736c64bd58879af17189f703dc2b9
+
         android:id="@+id/LblDescEndereco"
         android:layout_width="wrap_content"
         android:layout_height="18dp"
@@ -178,8 +175,35 @@
         android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="bold"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EditTextTelefoneFuncionario" />
+
+        app:layout_constraintStart_toEndOf="@+id/lblDescEndereco"
+        app:layout_constraintTop_toBottomOf="@+id/EditTextEmailFuncionario" />
+
+    <TextView
+        android:id="@+id/lblDescEndereco2"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/allerstd"
+        android:text="Data da compra"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.748" />
+
 
     <TextView
         android:id="@+id/lblDescEndereco"
@@ -197,24 +221,28 @@
         app:layout_constraintTop_toBottomOf="@+id/EditTextEmailFuncionario" />
 
     <EditText
-<<<<<<< HEAD
-=======
+
         android:id="@+id/EditTextNumeroFuncionario"
         android:layout_width="93dp"
+
+        android:id="@+id/EditTextValidadeProduto"
+        android:layout_width="118dp"
+
         android:layout_height="31dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginBottom="108dp"
         android:background="@drawable/tbx_num"
         android:fontFamily="@font/allerstd"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/lblDescEndereco2"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="@+id/lblDescEndereco2"
-        tools:layout_editor_absoluteY="483dp" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lblDescEndereco2" />
 
     <EditText
->>>>>>> 5d130b1539b736c64bd58879af17189f703dc2b9
+
         android:id="@+id/EditTextRuaFuncionario"
         android:layout_width="147dp"
         android:layout_height="31dp"
@@ -230,14 +258,13 @@
         app:layout_constraintTop_toBottomOf="@+id/lblDescEndereco" />
 
     <EditText
-        android:id="@+id/EditTextBairroFuncionario"
-<<<<<<< HEAD
+
         android:layout_width="126dp"
         android:layout_height="27dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-=======
+
         android:layout_width="113dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
@@ -246,7 +273,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
->>>>>>> 5d130b1539b736c64bd58879af17189f703dc2b9
+
         android:background="@drawable/tbx_bairro"
         android:fontFamily="@font/allerstd"
         android:textSize="16sp"
@@ -315,30 +342,29 @@
         android:id="@+id/LblDescRG"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
+
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
-=======
+
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
->>>>>>> 5d130b1539b736c64bd58879af17189f703dc2b9
+
         android:fontFamily="@font/allerstd"
         android:text="Nome"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="bold"
-<<<<<<< HEAD
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/molduraIconFunc" />
-=======
+
         app:layout_constraintBottom_toTopOf="@+id/EditTextRGFuncionario"
         app:layout_constraintEnd_toEndOf="@+id/molduraIconFunc"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/molduraIconFunc"
         app:layout_constraintTop_toBottomOf="@+id/molduraIconFunc"
         app:layout_constraintVertical_bias="1.0" />
->>>>>>> 5d130b1539b736c64bd58879af17189f703dc2b9
 
     <EditText
         android:id="@+id/EditTextRGFuncionario"

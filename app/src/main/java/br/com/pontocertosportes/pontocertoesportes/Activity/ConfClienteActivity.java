@@ -61,9 +61,24 @@ public class ConfClienteActivity extends AppCompatActivity {
 
     public void salvar(){
 
-        Clients client = new Clients(nomeClient.getText().toString(), cpfClient.getText().toString(),listaCliente.size(), rgClient.getText().toString(), aniversarioClient.getText().toString(), emailClient.getText().toString(), telefoneClient.getText().toString(),
-                                     ruaClient.getText().toString(), numeroClient.getText().toString(), cepClient.getText().toString(), bairroClient.getText().toString(), cidadeClient.getText().toString(), estadoClient.getText().toString());
-        this.listaCliente.add(client);
+        Clients client = new Clients();
+
+         client.setName(nomeClient.getText().toString());
+        client.setCpf(cpfClient.getText().toString());
+        client.setRg( rgClient.getText().toString());
+        client.setAniversario(aniversarioClient.getText().toString());
+        client.setEmail(emailClient.getText().toString());
+        client.setTelefone(telefoneClient.getText().toString());
+        client.setRua(ruaClient.getText().toString());
+        client.setNumero(numeroClient.getText().toString());
+        client.setCep(cepClient.getText().toString());
+        client.setBairro(bairroClient.getText().toString());
+        client.setCidade(cidadeClient.getText().toString());
+        client.setEstado(estadoClient.getText().toString());
+
+
+        //inseriri no banco aqui
+
     }
 
     public void cancelar(View view){
