@@ -23,6 +23,6 @@ public class SelectIconUser extends AppCompatActivity {
     }
 
     public void cancel(){
-
+        finish();
     }
 }
