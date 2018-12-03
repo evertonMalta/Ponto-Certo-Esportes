@@ -20,6 +20,7 @@ public class SelectIconUser extends AppCompatActivity {
 
     public void selectImage(){
 
+        String ata;
     }
 
     public void cancel(){
