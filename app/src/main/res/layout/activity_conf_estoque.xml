@@ -151,7 +151,7 @@
     <TextView
         android:id="@+id/lblDescEndereco2"
         android:layout_width="wrap_content"
-        android:layout_height="18dp"
+        android:layout_height="27dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -159,16 +159,16 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/allerstd"
-        android:text="Validade"
+        android:text="Data da compra"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintHorizontal_bias="0.944"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.722" />
+        app:layout_constraintVertical_bias="0.748" />
 
     <TextView
         android:id="@+id/lblDescEndereco"
@@ -190,19 +190,20 @@
         app:layout_constraintTop_toBottomOf="@+id/EditTextEmailFuncionario" />
 
     <EditText
-        android:id="@+id/EditTextNumeroFuncionario"
-        android:layout_width="93dp"
+        android:id="@+id/EditTextValidadeProduto"
+        android:layout_width="118dp"
         android:layout_height="31dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginBottom="108dp"
         android:background="@drawable/tbx_num"
         android:fontFamily="@font/allerstd"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/lblDescEndereco2"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="@+id/lblDescEndereco2"
-        tools:layout_editor_absoluteY="483dp" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lblDescEndereco2" />
 
     <EditText
         android:id="@+id/EditTextRuaFuncionario"
