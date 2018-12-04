@@ -5,10 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.pontocertosportes.pontocertoesportes.DAO.ClientDAO;
 import br.com.pontocertosportes.pontocertoesportes.Model.Clients;
 import br.com.pontocertosportes.pontocertoesportes.R;
 
@@ -28,6 +30,7 @@ public class ConfClienteActivity extends AppCompatActivity {
     EditText cidadeClient;
     EditText estadoClient;
 
+    ClientDAO clientDAO = new ClientDAO(getBaseContext());
     int id = 0;
     private List<Clients> listaCliente = new ArrayList<>();
     @Override
@@ -59,11 +62,11 @@ public class ConfClienteActivity extends AppCompatActivity {
         return;
     }
 
-    public void salvar(){
+    public void salvar(View view){
 
         Clients client = new Clients();
 
-         client.setName(nomeClient.getText().toString());
+        client.setName(nomeClient.getText().toString());
         client.setCpf(cpfClient.getText().toString());
         client.setRg( rgClient.getText().toString());
         client.setAniversario(aniversarioClient.getText().toString());
@@ -78,6 +81,8 @@ public class ConfClienteActivity extends AppCompatActivity {
 
 
         //inseriri no banco aqui
+        clientDAO.InsertClient(client);
+        //Toast.makeText(getApplicationContext(),clientDAO.InsertClient(client).toString(), Toast.LENGTH_LONG).show();
 
     }
 
