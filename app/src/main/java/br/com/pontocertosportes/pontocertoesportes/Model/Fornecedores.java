@@ -1,6 +1,7 @@
 package br.com.pontocertosportes.pontocertoesportes.Model;
 
-public class Clients extends Endereco{
+public class Fornecedores extends Endereco {
+
     private int id;
     private String name;
     private String cpf;
@@ -9,17 +10,13 @@ public class Clients extends Endereco{
     private String email;
     private String telefone;
 
+    Endereco endereco = new Endereco();
 
-
-
-    public Clients() {
-    }
-
-    
-
-    public Clients( int id, String name, String cpf, String rg, String aniversario, String email, String telefone, String rua, String numero, String cep, String bairro, String cidade, String estado) {
+    public Fornecedores(int id, String name, String cpf, String rg, String aniversario, String email,
+                        String telefone, String rua, String numero, String cep, String bairro,
+                        String cidade, String estado) {
         super(rua, numero, cep, bairro, cidade, estado);
-
+        this.id = id;
         this.name = name;
         this.cpf = cpf;
         this.rg = rg;
@@ -27,7 +24,6 @@ public class Clients extends Endereco{
         this.email = email;
         this.telefone = telefone;
     }
-
 
 
     public int getId() {
@@ -85,7 +81,6 @@ public class Clients extends Endereco{
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
-
 
 
 }

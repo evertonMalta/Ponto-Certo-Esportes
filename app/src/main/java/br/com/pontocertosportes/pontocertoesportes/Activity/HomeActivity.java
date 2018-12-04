@@ -31,8 +31,6 @@ public class HomeActivity extends AppCompatActivity {
         nameUserTextView.setText(nameUsuario);
         imageUserImageView = findViewById(R.id.imageUser);
         //imageUserImageView.setImageResource(imagensIds[i]);
-
-
     }
 
     @Override
@@ -44,6 +42,10 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     //functions open activity`s
+    public void selectIconUser(View view){
+        Intent intent = new Intent(this, SelectIconUser.class);
+        startActivity(intent);
+    }
 
     public void openCliente(View view){
         Intent intent = new Intent(this, ListClientsActivity.class);
