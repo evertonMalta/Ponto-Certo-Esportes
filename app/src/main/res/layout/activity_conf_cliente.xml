@@ -307,29 +307,25 @@
         android:id="@+id/LblDescCNPJ"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
-        android:layout_marginStart="132dp"
-        android:layout_marginLeft="132dp"
-=======
+
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="120dp"
         android:layout_marginRight="120dp"
->>>>>>> 2dc53fba390a888f63dc0c5e13cdbc430fb4083b
+
         android:fontFamily="@font/allerstd"
         android:text="CPF"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="bold"
-<<<<<<< HEAD
+
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="273dp" />
-=======
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/EditTextRGCliente"
         app:layout_constraintTop_toBottomOf="@+id/EditTextAniversarioCliente" />
->>>>>>> 2dc53fba390a888f63dc0c5e13cdbc430fb4083b
+
 
     <EditText
         android:id="@+id/EditTextCPFCliente"
@@ -337,20 +333,17 @@
         android:layout_height="27dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-<<<<<<< HEAD
+
         android:layout_marginTop="4dp"
-=======
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
->>>>>>> 2dc53fba390a888f63dc0c5e13cdbc430fb4083b
+
         android:background="@drawable/tbx_cpf"
         android:fontFamily="@font/allerstd"
         android:textSize="16sp"
         android:textStyle="bold"
-<<<<<<< HEAD
-=======
+
         app:layout_constraintEnd_toEndOf="parent"
->>>>>>> 2dc53fba390a888f63dc0c5e13cdbc430fb4083b
         app:layout_constraintStart_toEndOf="@+id/EditTextRGCliente"
         app:layout_constraintTop_toBottomOf="@+id/LblDescCNPJ" />
 
@@ -358,26 +351,26 @@
         android:id="@+id/LblDescRG"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="272dp"
-=======
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
->>>>>>> 2dc53fba390a888f63dc0c5e13cdbc430fb4083b
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="272dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/allerstd"
         android:text="RG"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-<<<<<<< HEAD
-        app:layout_constraintTop_toTopOf="parent" />
-=======
         app:layout_constraintTop_toBottomOf="@+id/EditTextNomeCliente" />
->>>>>>> 2dc53fba390a888f63dc0c5e13cdbc430fb4083b
+
+        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/EditTextNomeCliente" />
+
 
     <EditText
         android:id="@+id/EditTextRGCliente"

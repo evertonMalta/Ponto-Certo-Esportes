@@ -42,13 +42,13 @@
                     android:textColor="@color/colorPrimary"
                     android:textSize="29dp" />
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/imageUser"
                     android:layout_width="110dp"
                     android:layout_height="110dp"
                     android:layout_margin="10dp"
-                    android:src="@drawable/futebol"/>
-
+                    android:background="@drawable/futebol"
+                    />
 
             </LinearLayout>
 
@@ -115,7 +115,6 @@
                     android:layout_margin="5dp"
                     android:onClick="openRealizarVenda"
                     android:src="@drawable/btn_realizarvendas" />
-
 
             </LinearLayout>
 

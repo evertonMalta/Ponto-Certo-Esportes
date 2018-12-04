@@ -1,5 +1,6 @@
 package br.com.pontocertosportes.pontocertoesportes.Model;
 
+
 public class Fornecedores extends Endereco{
 
     private int id;
@@ -22,8 +23,6 @@ public class Fornecedores extends Endereco{
         this.email = email;
         this.telefone = telefone;
     }
-
-
 
     public int getId() {
         return id;
@@ -80,8 +79,6 @@ public class Fornecedores extends Endereco{
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
-
-
 
 
 }

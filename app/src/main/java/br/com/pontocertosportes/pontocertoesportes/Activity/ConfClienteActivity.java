@@ -66,7 +66,7 @@ public class ConfClienteActivity extends AppCompatActivity {
 
         Clients client = new Clients();
 
-         client.setName(nomeClient.getText().toString());
+        client.setName(nomeClient.getText().toString());
         client.setCpf(cpfClient.getText().toString());
         client.setRg( rgClient.getText().toString());
         client.setAniversario(aniversarioClient.getText().toString());

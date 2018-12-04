@@ -7,7 +7,11 @@ import android.text.NoCopySpan;
 public class CreateBanco extends SQLiteOpenHelper{
     private static final String NOME_BANCO = "banco.db";
     private static final int VERSAO = 1;
-    private String query;
+
+    public  CreateBanco(Context context){
+        super(context, NOME_BANCO, null,VERSAO);
+
+      private String query;
     private String tabela;
 
 
@@ -25,6 +29,7 @@ public class CreateBanco extends SQLiteOpenHelper{
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+
         db.execSQL("drop table if exists "+ this.tabela);
         onCreate(db);
     }
