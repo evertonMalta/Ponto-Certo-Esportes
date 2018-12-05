@@ -9,7 +9,7 @@
     <!--Moldura Funcionario-->
 
     <ImageView
-        android:id="@+id/molduraIconFunc"
+        android:id="@+id/molduraIconProduto"
         android:layout_width="119dp"
         android:layout_height="115dp"
         android:layout_marginStart="8dp"
@@ -19,13 +19,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LblNomeFuncionarioText"
+        app:layout_constraintTop_toBottomOf="@+id/LblNomeEstoqueText"
         app:srcCompat="@drawable/moldura_imagem" />
 
     <!--Titulo da pagina -->
 
     <TextView
-        android:id="@+id/textTitlePageFuncionario"
+        android:id="@+id/textTitlePageEstoque"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -44,7 +44,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/LblNomeFuncionarioText"
+        android:id="@+id/LblNomeEstoqueText"
         android:layout_width="wrap_content"
         android:layout_height="42dp"
         android:layout_marginStart="8dp"
@@ -59,7 +59,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTitlePageFuncionario" />
+        app:layout_constraintTop_toBottomOf="@+id/textTitlePageEstoque" />
 
     <!--Descricao do funcionario-->
 
@@ -75,7 +75,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/molduraIconFunc" />
+        app:layout_constraintTop_toBottomOf="@+id/molduraIconProduto" />
 
 
     <EditText
@@ -105,7 +105,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/molduraIconFunc" />
+        app:layout_constraintTop_toBottomOf="@+id/molduraIconProduto" />
 
     <EditText
         android:id="@+id/EditTextAniversarioFuncionario"
@@ -122,7 +122,7 @@
         app:layout_constraintTop_toBottomOf="@+id/LblDescAniversario" />
 
     <TextView
-        android:id="@+id/LblDescEndereco"
+        android:id="@+id/LblDescQuantidadeProduto"
         android:layout_width="wrap_content"
         android:layout_height="18dp"
         android:layout_marginStart="16dp"
@@ -134,7 +134,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditTextEmailFuncionario" />
+        app:layout_constraintTop_toBottomOf="@+id/EditTextCategoriaProduto" />
 
     <EditText
         android:id="@+id/EditTextNumeroFuncionario"
@@ -150,11 +150,11 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/EditTextBairroFuncionario"
-        app:layout_constraintStart_toEndOf="@+id/EditTextRuaFuncionario"
-        app:layout_constraintTop_toBottomOf="@+id/LblDescEndereco" />
+        app:layout_constraintStart_toEndOf="@+id/EditTextPrecoProduto"
+        app:layout_constraintTop_toBottomOf="@+id/LblDescQuantidadeProduto" />
 
     <EditText
-        android:id="@+id/EditTextRuaFuncionario"
+        android:id="@+id/EditTextPrecoProduto"
         android:layout_width="116dp"
         android:layout_height="27dp"
         android:layout_marginStart="16dp"
@@ -165,7 +165,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LblDescEndereco" />
+        app:layout_constraintTop_toBottomOf="@+id/LblDescQuantidadeProduto" />
 
     <EditText
         android:id="@+id/EditTextBairroFuncionario"
@@ -179,7 +179,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LblDescEndereco" />
+        app:layout_constraintTop_toBottomOf="@+id/LblDescQuantidadeProduto" />
 
     <EditText
         android:id="@+id/EditTextCEPFuncionario"
@@ -194,7 +194,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditTextRuaFuncionario" />
+        app:layout_constraintTop_toBottomOf="@+id/EditTextPrecoProduto" />
 
     <EditText
         android:id="@+id/EditTextCidadeFuncionario"
@@ -230,7 +230,7 @@
         app:layout_constraintTop_toBottomOf="@+id/EditTextBairroFuncionario" />
 
     <TextView
-        android:id="@+id/LblDescTelefone"
+        android:id="@+id/LblDescTamanhoProduto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -245,7 +245,7 @@
         app:layout_constraintTop_toBottomOf="@+id/EditTextCPFFuncionario" />
 
     <EditText
-        android:id="@+id/EditTextTelefoneFuncionario"
+        android:id="@+id/EditTextTamanhoProduto"
         android:layout_width="133dp"
         android:layout_height="27dp"
         android:layout_marginEnd="16dp"
@@ -256,10 +256,10 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LblDescTelefone" />
+        app:layout_constraintTop_toBottomOf="@+id/LblDescTamanhoProduto" />
 
     <TextView
-        android:id="@+id/LblDescEmail"
+        android:id="@+id/LblDescCategoriaProduto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -271,10 +271,10 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditTextRGFuncionario" />
+        app:layout_constraintTop_toBottomOf="@+id/EditTextNomeProduto" />
 
     <EditText
-        android:id="@+id/EditTextEmailFuncionario"
+        android:id="@+id/EditTextCategoriaProduto"
         android:layout_width="145dp"
         android:layout_height="27dp"
         android:layout_marginStart="16dp"
@@ -284,10 +284,10 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LblDescEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/LblDescCategoriaProduto" />
 
     <TextView
-        android:id="@+id/LblDescCNPJ"
+        android:id="@+id/LblDescCPFCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -312,10 +312,10 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LblDescCNPJ" />
+        app:layout_constraintTop_toBottomOf="@+id/LblDescCPFCliente" />
 
     <TextView
-        android:id="@+id/LblDescRG"
+        android:id="@+id/LblDescRGCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -330,7 +330,7 @@
         app:layout_constraintTop_toBottomOf="@+id/EditTextNomeFuncionario" />
 
     <EditText
-        android:id="@+id/EditTextRGFuncionario"
+        android:id="@+id/EditTextNomeProduto"
         android:layout_width="133dp"
         android:layout_height="27dp"
         android:layout_marginStart="16dp"
@@ -340,7 +340,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LblDescRG" />
+        app:layout_constraintTop_toBottomOf="@+id/LblDescRGCliente" />
 
     <!--Divisoria do botao-->
 

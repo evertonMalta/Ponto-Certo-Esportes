@@ -25,14 +25,14 @@
     <!--Titulo da pagina -->
 
     <TextView
-        android:id="@+id/textTitlePageFuncionario"
+        android:id="@+id/textTitlePageEstoque"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:fontFamily="@font/allerstd"
         android:text="adicionar novo"
         android:textColor="@color/colorPrimary"
@@ -46,10 +46,10 @@
         android:id="@+id/LblNomeClienteText"
         android:layout_width="wrap_content"
         android:layout_height="42dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:fontFamily="@font/allerstd"
         android:text="Cliente"
         android:textAllCaps="false"
@@ -59,7 +59,7 @@
         android:typeface="normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTitlePageFuncionario" />
+        app:layout_constraintTop_toBottomOf="@+id/textTitlePageEstoque" />
 
     <!--Descricao do funcionario-->
 
@@ -81,7 +81,7 @@
 
     <EditText
         android:id="@+id/EditTextNomeCliente"
-        android:layout_width="176dp"
+        android:layout_width="211dp"
         android:layout_height="27dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
@@ -106,7 +106,8 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/EditTextNomeCliente"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/molduraIconCliente" />
 
     <EditText
@@ -123,11 +124,12 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/EditTextNomeCliente"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/LblDescAniversario" />
 
     <TextView
-        android:id="@+id/LblDescEndereco"
+        android:id="@+id/LblDescQuantidadeProduto"
         android:layout_width="wrap_content"
         android:layout_height="18dp"
         android:layout_marginStart="16dp"
@@ -145,20 +147,18 @@
         android:id="@+id/EditTextNumeroCliente"
         android:layout_width="63dp"
         android:layout_height="27dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/tbx_num"
         android:fontFamily="@font/allerstd"
         android:hint="número"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/EditTextRuaCliente"
-        app:layout_constraintTop_toBottomOf="@+id/LblDescEndereco" />
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/LblDescQuantidadeProduto" />
 
     <EditText
         android:id="@+id/EditTextRuaCliente"
-        android:layout_width="126dp"
+        android:layout_width="152dp"
         android:layout_height="27dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
@@ -169,11 +169,11 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LblDescEndereco" />
+        app:layout_constraintTop_toBottomOf="@+id/LblDescQuantidadeProduto" />
 
     <EditText
         android:id="@+id/EditTextBairroCliente"
-        android:layout_width="116dp"
+        android:layout_width="92dp"
         android:layout_height="27dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -186,13 +186,13 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.172"
-        app:layout_constraintStart_toEndOf="@+id/EditTextNumeroCliente"
-        app:layout_constraintTop_toBottomOf="@+id/LblDescEndereco" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/LblDescQuantidadeProduto" />
 
     <EditText
         android:id="@+id/EditTextCEPCliente"
-        android:layout_width="79dp"
+        android:layout_width="100dp"
         android:layout_height="27dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
@@ -207,10 +207,10 @@
 
     <EditText
         android:id="@+id/EditTextCidadeCliente"
-        android:layout_width="107dp"
+        android:layout_width="115dp"
         android:layout_height="27dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/tbx_cidade"
         android:fontFamily="@font/allerstd"
@@ -235,12 +235,12 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
-        app:layout_constraintStart_toEndOf="@+id/EditTextCidadeCliente"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/EditTextBairroCliente" />
 
     <TextView
-        android:id="@+id/LblDescTelefone"
+        android:id="@+id/LblDescTamanhoProduto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -254,7 +254,8 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/EditTextEmailCliente"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/EditTextCPFCliente" />
 
     <EditText
@@ -271,12 +272,12 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.465"
-        app:layout_constraintStart_toEndOf="@+id/EditTextEmailCliente"
-        app:layout_constraintTop_toBottomOf="@+id/LblDescTelefone" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/LblDescTamanhoProduto" />
 
     <TextView
-        android:id="@+id/LblDescEmail"
+        android:id="@+id/LblDescCategoriaProduto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -292,7 +293,7 @@
 
     <EditText
         android:id="@+id/EditTextEmailCliente"
-        android:layout_width="166dp"
+        android:layout_width="200dp"
         android:layout_height="27dp"
         android:layout_marginStart="12dp"
         android:layout_marginLeft="12dp"
@@ -301,16 +302,16 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LblDescEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/LblDescCategoriaProduto" />
 
     <TextView
-        android:id="@+id/LblDescCNPJ"
+        android:id="@+id/LblDescCPFCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="120dp"
         android:layout_marginRight="120dp"
 
@@ -323,13 +324,14 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="273dp" />
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/EditTextRGCliente"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/EditTextAniversarioCliente" />
 
 
     <EditText
         android:id="@+id/EditTextCPFCliente"
-        android:layout_width="131dp"
+        android:layout_width="152dp"
         android:layout_height="27dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -344,11 +346,12 @@
         android:textStyle="bold"
 
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/EditTextRGCliente"
-        app:layout_constraintTop_toBottomOf="@+id/LblDescCNPJ" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/LblDescCPFCliente" />
 
     <TextView
-        android:id="@+id/LblDescRG"
+        android:id="@+id/LblDescRGCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -374,7 +377,7 @@
 
     <EditText
         android:id="@+id/EditTextRGCliente"
-        android:layout_width="147dp"
+        android:layout_width="158dp"
         android:layout_height="27dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
@@ -383,7 +386,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LblDescRG" />
+        app:layout_constraintTop_toBottomOf="@+id/LblDescRGCliente" />
 
     <!--Divisoria do botao-->
 
@@ -392,13 +395,14 @@
         android:id="@+id/btnSalvarCadastroCliente"
         android:layout_width="128dp"
         android:layout_height="42.5dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/btn_salvar"
         android:fontFamily="@font/allerstd"
         android:onClick="salvar"
         android:visibility="visible"
+        android:onClick="salvar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -406,15 +410,22 @@
         android:id="@+id/btnCancelarCadastroCliente"
         android:layout_width="128dp"
         android:layout_height="42.5dp"
-        android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/btn_cancelar"
         android:fontFamily="@font/allerstd"
         android:onClick="cancelar"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="180dp" />
 
 
 </android.support.constraint.ConstraintLayout>

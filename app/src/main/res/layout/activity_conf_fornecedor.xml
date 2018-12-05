@@ -124,7 +124,7 @@
         app:layout_constraintTop_toBottomOf="@+id/LblDescAniversario" />
 
     <TextView
-        android:id="@+id/LblDescEndereco"
+        android:id="@+id/LblDescQuantidadeProduto"
         android:layout_width="wrap_content"
         android:layout_height="18dp"
         android:layout_marginStart="20dp"
@@ -136,7 +136,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditTextEmailFuncionario" />
+        app:layout_constraintTop_toBottomOf="@+id/EditTextCategoriaProduto" />
 
     <EditText
         android:id="@+id/EditTextNumeroFornecedor"
@@ -151,7 +151,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/EditTextRuaFornecedor"
-        app:layout_constraintTop_toBottomOf="@+id/LblDescEndereco" />
+        app:layout_constraintTop_toBottomOf="@+id/LblDescQuantidadeProduto" />
 
     <EditText
         android:id="@+id/EditTextRuaFornecedor"
@@ -166,7 +166,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LblDescEndereco" />
+        app:layout_constraintTop_toBottomOf="@+id/LblDescQuantidadeProduto" />
 
     <EditText
         android:id="@+id/EditTextBairroFornecedor"
@@ -185,7 +185,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/EditTextNumeroFornecedor"
-        app:layout_constraintTop_toBottomOf="@+id/LblDescEndereco" />
+        app:layout_constraintTop_toBottomOf="@+id/LblDescQuantidadeProduto" />
 
     <EditText
         android:id="@+id/EditTextCEPFornecedor"
@@ -237,7 +237,7 @@
         app:layout_constraintTop_toBottomOf="@+id/EditTextBairroFornecedor" />
 
     <TextView
-        android:id="@+id/LblDescTelefone"
+        android:id="@+id/LblDescTamanhoProduto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="80dp"
@@ -251,7 +251,7 @@
         app:layout_constraintTop_toBottomOf="@+id/EditTextAniversarioFornecedor" />
 
     <EditText
-        android:id="@+id/EditTextTelefoneFuncionario"
+        android:id="@+id/EditTextTamanhoProduto"
         android:layout_width="129dp"
         android:layout_height="27dp"
         android:layout_marginEnd="16dp"
@@ -262,10 +262,10 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LblDescTelefone" />
+        app:layout_constraintTop_toBottomOf="@+id/LblDescTamanhoProduto" />
 
     <TextView
-        android:id="@+id/LblDescEmail"
+        android:id="@+id/LblDescCategoriaProduto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -279,7 +279,7 @@
         app:layout_constraintTop_toBottomOf="@+id/EditTextCNPJFornecedor" />
 
     <EditText
-        android:id="@+id/EditTextEmailFuncionario"
+        android:id="@+id/EditTextCategoriaProduto"
         android:layout_width="151dp"
         android:layout_height="27dp"
         android:layout_marginStart="16dp"
@@ -289,10 +289,10 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LblDescEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/LblDescCategoriaProduto" />
 
     <TextView
-        android:id="@+id/LblDescCNPJ"
+        android:id="@+id/LblDescCPFCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -316,7 +316,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LblDescCNPJ" />
+        app:layout_constraintTop_toBottomOf="@+id/LblDescCPFCliente" />
 
     <!--Divisoria do botao-->
 
