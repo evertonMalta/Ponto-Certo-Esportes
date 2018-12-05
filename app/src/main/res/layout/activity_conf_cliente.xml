@@ -308,20 +308,26 @@
         android:id="@+id/LblDescCPFCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="120dp"
         android:layout_marginRight="120dp"
+
         android:fontFamily="@font/allerstd"
         android:text="CPF"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="273dp" />
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/EditTextAniversarioCliente" />
+
 
     <EditText
         android:id="@+id/EditTextCPFCliente"
@@ -329,12 +335,16 @@
         android:layout_height="27dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+
         android:background="@drawable/tbx_cpf"
         android:fontFamily="@font/allerstd"
         android:textSize="16sp"
         android:textStyle="bold"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -347,6 +357,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="272dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/allerstd"
         android:text="RG"
         android:textColor="@android:color/black"
@@ -354,6 +370,10 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EditTextNomeCliente" />
+
+        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/EditTextNomeCliente" />
+
 
     <EditText
         android:id="@+id/EditTextRGCliente"
@@ -380,6 +400,7 @@
         android:layout_marginBottom="16dp"
         android:background="@drawable/btn_salvar"
         android:fontFamily="@font/allerstd"
+        android:onClick="salvar"
         android:visibility="visible"
         android:onClick="salvar"
         app:layout_constraintBottom_toBottomOf="parent"
