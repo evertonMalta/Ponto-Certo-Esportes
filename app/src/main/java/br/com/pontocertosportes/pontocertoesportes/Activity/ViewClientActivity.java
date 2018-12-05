@@ -34,8 +34,10 @@ public class ViewClientActivity extends AppCompatActivity {
         Telefone = (TextView) findViewById(R.id.TelefoneTxtCliente);
         Endereco = (TextView) findViewById(R.id.EnderecoTxtCliente);
         Intent intent = getIntent();
-        if (intent.hasExtra("cliente")){
-            clienteEditado = (Clients) intent.getSerializableExtra("cliente");
+
+
+
+            clienteEditado = (Clients) getIntent().getExtras().get("cliente");
             Nome.setText(clienteEditado.getName());
             Aniversario.setText(clienteEditado.getAniversario());
             Rg.setText(clienteEditado.getRg());
@@ -43,7 +45,7 @@ public class ViewClientActivity extends AppCompatActivity {
             Email.setText(clienteEditado.getEmail());
             Telefone.setText(clienteEditado.getTelefone());
             Endereco.setText(clienteEditado.getRua() + ", " + clienteEditado.getNumero() + ", " + clienteEditado.getCep() + ", " + clienteEditado.getBairro() + ", " + clienteEditado.getCidade() + ", " + clienteEditado.getEstado());
-        }
+
     }
 
     public Clients clienteEditado = null;

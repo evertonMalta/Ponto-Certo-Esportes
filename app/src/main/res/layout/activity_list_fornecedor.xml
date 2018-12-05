@@ -43,7 +43,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:src="@drawable/plus"
-        android:onClick="openAddNewClient"
+        android:onClick="openAddNewFornecedor"
         app:backgroundTint="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
