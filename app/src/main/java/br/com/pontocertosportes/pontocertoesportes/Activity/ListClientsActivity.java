@@ -24,20 +24,11 @@ public class ListClientsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_clients);
-
         recyclerView = (RecyclerView)findViewById(R.id.ClientsList);
         //listagem porodutos
-
-
-
-
-
         //configuração do adapter
         ClientDAO dao = new ClientDAO(this);
         ClientAdapter adapter = new ClientAdapter(dao.retornarTodos());
-
-
-
         //configuração do Recicle View
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
@@ -46,6 +37,11 @@ public class ListClientsActivity extends AppCompatActivity {
         recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
 
 
+    }
+
+    public void abrirVisualizacao(View view){
+        Intent intent = new Intent(this, ViewClientActivity.class);
+        startActivity(intent);
     }
 
     public void openAddNewClient(View view) {

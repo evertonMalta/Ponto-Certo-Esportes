@@ -110,7 +110,7 @@
         app:layout_constraintTop_toBottomOf="@+id/EditTextNomeFornecedor" />
 
     <EditText
-        android:id="@+id/EditTextAniversarioFornecedor"
+        android:id="@+id/EditTextDtaInauguracaoFornecedor"
         android:layout_width="130dp"
         android:layout_height="27dp"
         android:layout_marginEnd="16dp"
@@ -136,7 +136,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditTextCategoriaProduto" />
+        app:layout_constraintTop_toBottomOf="@+id/EditTextEmailFornecedor" />
 
     <EditText
         android:id="@+id/EditTextNumeroFornecedor"
@@ -248,10 +248,10 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditTextAniversarioFornecedor" />
+        app:layout_constraintTop_toBottomOf="@+id/EditTextDtaInauguracaoFornecedor" />
 
     <EditText
-        android:id="@+id/EditTextTamanhoProduto"
+        android:id="@+id/EditTextTelefoneFornecedor"
         android:layout_width="129dp"
         android:layout_height="27dp"
         android:layout_marginEnd="16dp"
@@ -279,7 +279,7 @@
         app:layout_constraintTop_toBottomOf="@+id/EditTextCNPJFornecedor" />
 
     <EditText
-        android:id="@+id/EditTextCategoriaProduto"
+        android:id="@+id/EditTextEmailFornecedor"
         android:layout_width="151dp"
         android:layout_height="27dp"
         android:layout_marginStart="16dp"

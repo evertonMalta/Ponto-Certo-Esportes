@@ -59,12 +59,7 @@ public class ClientAdapter extends RecyclerView.Adapter<ClientAdapter.MyViewHold
         holder.id.setText("ID: "+ clients.getId());
         holder.name.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v){
-                Activity activity = getActivity(v);
-                Intent intent = activity.getIntent();
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                intent.putExtra("cliente", cliente);
-                activity.finish();
-                activity.startActivity(intent);
+                editClient = clients;
             }
         });
         holder.id.setOnClickListener(new Button.OnClickListener(){
@@ -113,6 +108,8 @@ public class ClientAdapter extends RecyclerView.Adapter<ClientAdapter.MyViewHold
             return 0;
         }
     }
+
+
 
      public void adicionarCliente(Clients cliente){
         this.listaClientes.add(cliente);
