@@ -1,5 +1,6 @@
 package br.com.pontocertosportes.pontocertoesportes.Activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,12 +11,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.pontocertosportes.pontocertoesportes.Adapter.ProductAdapter;
+import br.com.pontocertosportes.pontocertoesportes.DAO.ProdutoDAO;
 import br.com.pontocertosportes.pontocertoesportes.Model.Product;
 import br.com.pontocertosportes.pontocertoesportes.R;
 
 public class ListProductActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
-    private List<Product> listaProdutos = new ArrayList<>();
+    public static List<Product> listaProdutos = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,13 +27,11 @@ public class ListProductActivity extends AppCompatActivity {
 
         recyclerView = (RecyclerView)findViewById(R.id.ProductList);
         //listagem porodutos
-        this.CriarProdutos();
-
 
 
 
         //configuração do adapter
-        ProductAdapter adapter = new ProductAdapter(listaProdutos);
+        ProductAdapter adapter = new ProductAdapter(this.listaProdutos);
 
 
 
@@ -41,23 +42,19 @@ public class ListProductActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
 
-    public void CriarProdutos(){
-        //Product product = new Product("Julio Cesar","01","12345678988");
-        //this.listaProdutos.add(product);
 
-        //product = new Product("Fernando Fernandinho","02","54544848125");
-        //this.listaProdutos.add(product);
 
-        //product = new Product("Ademir Damasciano","03","25541521533");
-        //this.listaProdutos.add(product);
+    public void openAddNewProduct(View view) {
+        Intent intent = new Intent(this, ConfEstoqueActivity.class);
+        startActivity(intent);
 
-        //product = new Product("Julio Correia","04","25556123632");
-        //this.listaProdutos.add(product);
-
-        //product = new Product("Felipe Smith","05","14523354888");
-        //this.listaProdutos.add(product);
     }
 
-
+    public void AdcProduct(){
+        Product product = new Product(ConfEstoqueActivity.Nome.getText().toString(), 0,ConfEstoqueActivity.Categoria.getText().toString(),ConfEstoqueActivity.DataCompra.getText().toString(), Integer.parseInt(ConfEstoqueActivity.Tamanho.getText().toString()), Double.parseDouble(ConfEstoqueActivity.Preco.getText().toString()) , Integer.parseInt(ConfEstoqueActivity.Quantidade.getText().toString()), ConfEstoqueActivity.Descricao.getText().toString());
+        ListProductActivity.listaProdutos.add(product);
+        Intent intent = new Intent(this, ListProductActivity.class);
+        startActivity(intent);
+    }
 
 }
