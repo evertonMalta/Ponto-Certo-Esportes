@@ -2,6 +2,7 @@ package br.com.pontocertosportes.pontocertoesportes.DAO;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -12,27 +13,12 @@ import br.com.pontocertosportes.pontocertoesportes.Activity.ViewClientActivity;
 import br.com.pontocertosportes.pontocertoesportes.Banco.DbGateway;
 import br.com.pontocertosportes.pontocertoesportes.Model.Clients;
 
-public class ClientDAO {
-
-
-    String query = "CREATE TABLE IF NOT EXISTS `pontoCertoDB`.`Cliente` (" +
-            "`idCliente` INT NOT NULL AUTO_INCREMENT," +
-            "`nome` TEXT NOT NULL," +
-            "`cpf` TEXT NOT NULL,`rg` TEXT NOT NULL," +
-            "`aniversario` TEXT NOT NULL,`email` TEXT NOT NULL," +
-            "`telefone` TEXT NOT NULL," +
-            "`rua` TEXT NOT NULL,`numero` TEXT NOT NULL," +
-            "`cep` TEXT NOT NULL," +
-            "`bairro` TEXT NOT NULL," +
-            "`cidade` TEXT NOT NULL," +
-            "`estado` TEXT NOT NULL," +
-            "PRIMARY KEY (`idCliente`))";
-import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
 import android.widget.Toast;
 
 import br.com.pontocertosportes.pontocertoesportes.Banco.CreateBanco;
 import br.com.pontocertosportes.pontocertoesportes.Model.Clients;
+
+
 
 public class ClientDAO {
     private final static String TABELA = "Cliente";
@@ -52,9 +38,7 @@ public class ClientDAO {
             "cidade TEXT NOT NULL," +
             "estado TEXT NOT NULL)";
 
-    public ClientDAO(Context context){
-        banco = new CreateBanco(context, TABELA,queryCriarTabela );
-    }
+  
 
     public void InsertClient(Clients cliente){
         String queryInsert ="INSERT INTO "+this.TABELA+" (nome,cpf, aniversario, telefone, rua, numero, cep, bairro, cidade,estado) VALUES ( "+
@@ -165,5 +149,33 @@ public class ClientDAO {
    public boolean excluir(int id){
       return gw.getDatabase().delete(TABLE_CLIENTES, "ID=?", new String[]{ id + "" }) > 0;
    }
+   public Clients selecionar(int id){
+      Clients clients = new Clients();
+      SQLiteDatabase db = gw.getDatabase();
 
+      Cursor cursor = db.query(TABLE_CLIENTES, new String[]{"ID", "Nome", "Cpf", "Rg", "Aniversario", "Telefone", "Email", "Rua","Numero", "Bairro", "Cep", "Cidade", "Estado"}, "ID=?", new String[]{String.valueOf(id)}, null, null, null, null);
+
+      if(cursor != null){
+         cursor.moveToFirst();
+         if (cursor.getCount() > 0){
+            clients.setId(cursor.getInt(0));
+            clients.setName(cursor.getString(1));
+            clients.setCpf(cursor.getString(2));
+            clients.setRg(cursor.getString(3));
+            clients.setAniversario(cursor.getString(4));
+            clients.setTelefone(cursor.getString(5));
+            clients.setEmail(cursor.getString(6));
+            clients.setRua(cursor.getString(7));
+            clients.setNumero(cursor.getString(8));
+            clients.setBairro(cursor.getString(9));
+            clients.setCep(cursor.getString(10));
+            clients.setCidade(cursor.getString(11));
+            clients.setEstado(cursor.getString(12));
+         }else{
+            return null;
+         }
+      }
+      db.close();
+      return clients;
+   }
 }

@@ -1,9 +1,10 @@
 package br.com.pontocertosportes.pontocertoesportes.Model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Product {
+public class Product implements Serializable {
     private String categoria;
     private String name;
     private int ID;
@@ -49,7 +50,7 @@ public class Product {
     public Product(){}
 
 
-    public Product(String name, int ID, String categoria, String datacompra, int tamanho, double preco, int quantidade, String descricao) {
+    public Product(int ID, String name, String datacompra, String categoria, String descricao,  int tamanho, double preco, int quantidade) {
         this.name = name;
         this.ID = ID;
         this.categoria = categoria;
@@ -59,7 +60,9 @@ public class Product {
         this.quantidade = quantidade;
         this.descricao = descricao;
     }
+    public boolean equals(Object o) { return this.ID == ((Product)o).ID;}
 
+    public int hashCode(){ return this.ID;}
 
 
 }

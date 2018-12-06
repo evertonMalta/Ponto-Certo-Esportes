@@ -11,14 +11,14 @@ import android.view.View;
 import java.util.List;
 
 import br.com.pontocertosportes.pontocertoesportes.Adapter.ClientAdapter;
-import br.com.pontocertosportes.pontocertoesportes.Adapter.ProductAdapter;
 import br.com.pontocertosportes.pontocertoesportes.DAO.ClientDAO;
-import br.com.pontocertosportes.pontocertoesportes.Model.Clients;
+
 import br.com.pontocertosportes.pontocertoesportes.R;
 
 public class ListClientsActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
-    private List<Clients> listaDeClientes;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class ListClientsActivity extends AppCompatActivity {
         //listagem porodutos
         //configuração do adapter
         ClientDAO dao = new ClientDAO(this);
-        ClientAdapter adapter = new ClientAdapter(dao.retornarTodos());
+        ClientAdapter adapter = new ClientAdapter(dao.retornarTodos(),ListClientsActivity.this);
         //configuração do Recicle View
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);

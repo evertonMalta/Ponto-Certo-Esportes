@@ -69,7 +69,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/nameTxtFuncionario"
+        android:id="@+id/NomeTextFuncionario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
@@ -81,7 +81,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
-        android:id="@+id/nameTxtProduct2"
+        android:id="@+id/RgTextFuncionario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="24dp"
@@ -89,7 +89,7 @@
         android:fontFamily="@font/allerstd"
         android:text="123456789"
         android:textColor="@android:color/black"
-        app:layout_constraintStart_toEndOf="@+id/nameTxtFuncionario"
+        app:layout_constraintStart_toEndOf="@+id/NomeTextFuncionario"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
@@ -117,10 +117,10 @@
         android:text="Telefone"
         android:textColor="@color/colorPrimary"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dateBuytxtProduct" />
+        app:layout_constraintTop_toBottomOf="@+id/AniversarioTextFuncionario" />
 
     <TextView
-        android:id="@+id/categoryTxtProduct"
+        android:id="@+id/CpfTextFuncionario"
         android:layout_width="wrap_content"
         android:layout_height="21dp"
         android:layout_marginEnd="44dp"
@@ -133,9 +133,9 @@
 
 
     <TextView
-        android:id="@+id/categoryTxtProduct2"
+        android:id="@+id/EmailTextFuncionario"
         android:layout_width="wrap_content"
-        android:layout_height="31dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:fontFamily="@font/allerstd"
@@ -148,15 +148,17 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/allerstd"
         android:text="Data Nascimento"
         android:textColor="@color/colorPrimary"
-        app:layout_constraintTop_toBottomOf="@+id/nameTxtFuncionario"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NomeTextFuncionario" />
 
     <TextView
-        android:id="@+id/dateBuytxtProduct"
+        android:id="@+id/AniversarioTextFuncionario"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
         android:layout_marginLeft="16dp"
@@ -168,8 +170,9 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
-        android:id="@+id/dateBuytxtProduct2"
+        android:id="@+id/TelefoneTextFuncionario"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:fontFamily="@font/allerstd"
@@ -189,7 +192,7 @@
         android:text="Endereço"
         android:textColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/categoryTxtProduct2" />
+        app:layout_constraintTop_toBottomOf="@+id/EmailTextFuncionario" />
 
     <TextView
         android:id="@+id/textView8"
@@ -202,7 +205,7 @@
         android:text="Email"
         android:textColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/categoryTxtProduct" />
+        app:layout_constraintTop_toBottomOf="@+id/CpfTextFuncionario" />
 
     <TextView
         android:id="@+id/textView6"
@@ -214,11 +217,11 @@
         android:fontFamily="@font/allerstd"
         android:text="RG"
         android:textColor="@color/colorPrimary"
-        app:layout_constraintStart_toEndOf="@+id/nameTxtFuncionario"
+        app:layout_constraintStart_toEndOf="@+id/NomeTextFuncionario"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/custtxtProduct2"
+        android:id="@+id/EnderecoTextFuncionario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"

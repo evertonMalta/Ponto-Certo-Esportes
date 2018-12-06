@@ -19,13 +19,9 @@ import br.com.pontocertosportes.pontocertoesportes.DAO.FornecedorDAO;
 import br.com.pontocertosportes.pontocertoesportes.Model.Fornecedores;
 import br.com.pontocertosportes.pontocertoesportes.R;
 
-
-import static br.com.pontocertosportes.pontocertoesportes.R.layout;
-
 public class FornecedorAdapter extends RecyclerView.Adapter<FornecedorAdapter.MyViewHolder> {
 
-    private List<Fornecedores> listaFornecedores;
-
+    private final List<Fornecedores> listaFornecedores;
     String fornecedores = null;
 
     public FornecedorAdapter(List<Fornecedores> list) {
@@ -35,7 +31,7 @@ public class FornecedorAdapter extends RecyclerView.Adapter<FornecedorAdapter.My
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return new MyViewHolder(LayoutInflater.from(parent.getContext())
-                .inflate(layout.adapter_list_fornecedores, parent, false));
+                .inflate(R.layout.adapter_list_fornecedores, parent, false));
 
     }
 

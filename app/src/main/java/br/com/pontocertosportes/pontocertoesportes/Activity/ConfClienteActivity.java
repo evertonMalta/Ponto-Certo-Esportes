@@ -37,7 +37,6 @@ public class ConfClienteActivity extends AppCompatActivity {
 
     ClientDAO clientDAO = new ClientDAO(getBaseContext());
     int id = 0;
-    private List<Clients> listaCliente = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -60,7 +59,7 @@ public class ConfClienteActivity extends AppCompatActivity {
         estadoClient = (EditText) findViewById(R.id.EditTextEstadoCliente);
 
         Intent intent = getIntent();
-        if (intent.hasExtra("Cliente")){
+        if (intent.hasExtra("Cliente")) {
             clienteEditado = (Clients) intent.getSerializableExtra("Cliente");
             nomeClient.setText(clienteEditado.getName());
             aniversarioClient.setText(clienteEditado.getAniversario());
@@ -116,7 +115,7 @@ public class ConfClienteActivity extends AppCompatActivity {
         //Salvando os dados
         ClientDAO dao = new ClientDAO(getBaseContext());
         ClientDAO ClientDao = new ClientDAO(this);
-        ClientAdapter adapter = new ClientAdapter(ClientDao.retornarTodos());
+        ClientAdapter adapter = new ClientAdapter(ClientDao.retornarTodos(),this);
 
         boolean sucesso;
         if (clienteEditado != null)

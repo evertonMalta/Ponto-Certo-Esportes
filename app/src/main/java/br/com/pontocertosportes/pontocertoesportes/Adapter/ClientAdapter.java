@@ -12,30 +12,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.os.Bundle;
 
 import java.util.List;
 
 import br.com.pontocertosportes.pontocertoesportes.Activity.ListClientsActivity;
-import br.com.pontocertosportes.pontocertoesportes.Activity.LoginActivity;
 import br.com.pontocertosportes.pontocertoesportes.Activity.ViewClientActivity;
 import br.com.pontocertosportes.pontocertoesportes.DAO.ClientDAO;
 import br.com.pontocertosportes.pontocertoesportes.Model.Clients;
 import br.com.pontocertosportes.pontocertoesportes.R;
 
-import static br.com.pontocertosportes.pontocertoesportes.R.layout.adapter_list_clients;
-import static br.com.pontocertosportes.pontocertoesportes.R.layout.adapter_list_product;
-
 public class ClientAdapter extends RecyclerView.Adapter<ClientAdapter.MyViewHolder>  {
 
     private final List<Clients> listaClientes;
     String cliente = null;
+    private final Context context;
 
-    public ClientAdapter(List<Clients> list) {
-        this.listaClientes=list;
+    public ClientAdapter(final List<Clients> list, final Context context) {
+        this.listaClientes = list;
+        this.context = context;
     }
 
     @Override
@@ -59,7 +54,13 @@ public class ClientAdapter extends RecyclerView.Adapter<ClientAdapter.MyViewHold
         holder.id.setText("ID: "+ clients.getId());
         holder.name.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v){
-                editClient = clients;
+                final View view = v;
+                ClientDAO dao = new ClientDAO(view.getContext());
+                Clients client = dao.selecionar(clients.getId());
+                ViewClientActivity viewActivity = new ViewClientActivity(client);
+                Intent intent = new Intent(context, ViewClientActivity.class);
+                context.startActivity(intent);
+                //listClientsActivity.openAddNewClient();
             }
         });
         holder.id.setOnClickListener(new Button.OnClickListener(){
@@ -86,6 +87,9 @@ public class ClientAdapter extends RecyclerView.Adapter<ClientAdapter.MyViewHold
                 .setNegativeButton("Cancelar", null)
                         .create()
                         .show();
+
+
+                //listClientsActivity.openAddNewClient();
             }
         });
     }
