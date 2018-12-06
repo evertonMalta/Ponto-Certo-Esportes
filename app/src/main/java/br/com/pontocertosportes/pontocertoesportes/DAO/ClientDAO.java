@@ -11,28 +11,16 @@ import java.util.List;
 import br.com.pontocertosportes.pontocertoesportes.Activity.ViewClientActivity;
 import br.com.pontocertosportes.pontocertoesportes.Banco.DbGateway;
 import br.com.pontocertosportes.pontocertoesportes.Model.Clients;
-
-public class ClientDAO {
-
-
-    String query = "CREATE TABLE IF NOT EXISTS `pontoCertoDB`.`Cliente` (" +
-            "`idCliente` INT NOT NULL AUTO_INCREMENT," +
-            "`nome` TEXT NOT NULL," +
-            "`cpf` TEXT NOT NULL,`rg` TEXT NOT NULL," +
-            "`aniversario` TEXT NOT NULL,`email` TEXT NOT NULL," +
-            "`telefone` TEXT NOT NULL," +
-            "`rua` TEXT NOT NULL,`numero` TEXT NOT NULL," +
-            "`cep` TEXT NOT NULL," +
-            "`bairro` TEXT NOT NULL," +
-            "`cidade` TEXT NOT NULL," +
-            "`estado` TEXT NOT NULL," +
-            "PRIMARY KEY (`idCliente`))";
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.widget.Toast;
 
 import br.com.pontocertosportes.pontocertoesportes.Banco.CreateBanco;
 import br.com.pontocertosportes.pontocertoesportes.Model.Clients;
+
+
+
+
 
 public class ClientDAO {
     private final static String TABELA = "Cliente";
@@ -52,9 +40,7 @@ public class ClientDAO {
             "cidade TEXT NOT NULL," +
             "estado TEXT NOT NULL)";
 
-    public ClientDAO(Context context){
-        banco = new CreateBanco(context, TABELA,queryCriarTabela );
-    }
+
 
     public void InsertClient(Clients cliente){
         String queryInsert ="INSERT INTO "+this.TABELA+" (nome,cpf, aniversario, telefone, rua, numero, cep, bairro, cidade,estado) VALUES ( "+
@@ -71,7 +57,7 @@ public class ClientDAO {
 
 
             db = banco.getWritableDatabase();
-            db.q(queryInsert);
+            db.execSQL(queryInsert);
             db.close();
 
 

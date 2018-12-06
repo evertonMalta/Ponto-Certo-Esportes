@@ -10,6 +10,9 @@ public class CreateBanco extends SQLiteOpenHelper{
 
     private static final String DATABASE_NAME = "SISBD";
     private static final int DATABASE_VERSION = 2;
+
+
+
     private final String CREATE_TABLEClient = "CREATE TABLE Clientes " +
             "(ID INTEGER PRIMARY KEY AUTOINCREMENT," +
             " Nome TEXT NOT NULL," +
@@ -68,16 +71,15 @@ public class CreateBanco extends SQLiteOpenHelper{
 
     public CreateBanco(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
+    }
 
-    public  CreateBanco(Context context){
-        super(context, NOME_BANCO, null,VERSAO);
 
       private String query;
     private String tabela;
 
 
     public  CreateBanco(Context context, String tabela, String query){
-        super(context, NOME_BANCO, null,VERSAO);
+        super(context, DATABASE_NAME, null,DATABASE_VERSION);
         this.tabela = tabela;
         this.query = query;
 
