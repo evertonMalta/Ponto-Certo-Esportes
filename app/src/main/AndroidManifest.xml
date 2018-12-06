@@ -38,7 +38,10 @@
         <activity android:name=".Activity.ViewProdutoActivity" />
         <activity android:name=".Activity.ConfEstoqueActivity" />
         <activity android:name=".Activity.ConfProductActivity" />
-        <activity android:name=".Activity.SelectIconUser"></activity>
+        <activity android:name=".Activity.SelectIconUser" />
+        <activity android:name=".Activity.realizarVendas" />
+        <activity android:name=".Activity.list_fornecedores" />
+        <activity android:name=".adapter_fornecedores"></activity>
     </application>
 
 </manifest>

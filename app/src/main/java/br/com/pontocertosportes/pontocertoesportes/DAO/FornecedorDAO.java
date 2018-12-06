@@ -11,6 +11,7 @@ import br.com.pontocertosportes.pontocertoesportes.Banco.DbGateway;
 import br.com.pontocertosportes.pontocertoesportes.Model.Fornecedores;
 
 public class FornecedorDAO {
+
     private final String TABLE_FORNECEDOR = "Fornecedor";
     private DbGateway gw;
 
@@ -25,7 +26,6 @@ public class FornecedorDAO {
             int id = cursor.getInt(cursor.getColumnIndex("ID"));
             String nome = cursor.getString(cursor.getColumnIndex("Nome"));
             String Cnpj = cursor.getString(cursor.getColumnIndex("Cnpj"));
-
             String DtaInauguracao = cursor.getString(cursor.getColumnIndex("DtaInauguracao"));
             String Telefone = cursor.getString(cursor.getColumnIndex("Telefone"));
             String Email = cursor.getString(cursor.getColumnIndex("Email"));

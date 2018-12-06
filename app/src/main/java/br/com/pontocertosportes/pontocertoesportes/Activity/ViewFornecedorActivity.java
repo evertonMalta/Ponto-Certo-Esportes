@@ -1,15 +1,14 @@
 package br.com.pontocertosportes.pontocertoesportes.Activity;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import br.com.pontocertosportes.pontocertoesportes.Model.Fornecedores;
 import br.com.pontocertosportes.pontocertoesportes.R;
-
 
 public class ViewFornecedorActivity extends AppCompatActivity {
 
@@ -22,7 +21,6 @@ public class ViewFornecedorActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_fornecedor);
         Nome = (TextView) findViewById(R.id.nameTxtFornecedor);
         DtaInauguracao = (TextView) findViewById(R.id.dtaInauguracaotxtFornecedor);
@@ -31,7 +29,6 @@ public class ViewFornecedorActivity extends AppCompatActivity {
         Telefone = (TextView) findViewById(R.id.telefoneTextFornecedor);
         Endereco = (TextView) findViewById(R.id.enderecoTextFornecedor);
         Intent intent = getIntent();
-
 
         fornecedorEditado = (Fornecedores) getIntent().getExtras().get("fornecedor");
         Nome.setText(fornecedorEditado.getName());
