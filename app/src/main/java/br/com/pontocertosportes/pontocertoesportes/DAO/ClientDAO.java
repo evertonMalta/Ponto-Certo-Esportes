@@ -3,17 +3,14 @@ package br.com.pontocertosportes.pontocertoesportes.DAO;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.pontocertosportes.pontocertoesportes.Activity.ViewClientActivity;
 import br.com.pontocertosportes.pontocertoesportes.Banco.DbGateway;
 import br.com.pontocertosportes.pontocertoesportes.Model.Clients;
 
 public class ClientDAO {
-
 
    private final String TABLE_CLIENTES = "Clientes";
    private DbGateway gw;

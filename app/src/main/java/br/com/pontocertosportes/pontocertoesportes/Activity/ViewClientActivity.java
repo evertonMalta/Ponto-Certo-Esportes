@@ -4,14 +4,11 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import br.com.pontocertosportes.pontocertoesportes.Model.Clients;
 import br.com.pontocertosportes.pontocertoesportes.R;
-
-
 
 public class ViewClientActivity extends AppCompatActivity {
 
@@ -35,16 +32,14 @@ public class ViewClientActivity extends AppCompatActivity {
         Endereco = (TextView) findViewById(R.id.EnderecoTxtCliente);
         Intent intent = getIntent();
 
-
-
-            clienteEditado = (Clients) getIntent().getExtras().get("cliente");
-            Nome.setText(clienteEditado.getName());
-            Aniversario.setText(clienteEditado.getAniversario());
-            Rg.setText(clienteEditado.getRg());
-            Cpf.setText(clienteEditado.getCpf());
-            Email.setText(clienteEditado.getEmail());
-            Telefone.setText(clienteEditado.getTelefone());
-            Endereco.setText(clienteEditado.getRua() + ", " + clienteEditado.getNumero() + ", " + clienteEditado.getCep() + ", " + clienteEditado.getBairro() + ", " + clienteEditado.getCidade() + ", " + clienteEditado.getEstado());
+        clienteEditado = (Clients) getIntent().getExtras().get("cliente");
+        Nome.setText(clienteEditado.getName());
+        Aniversario.setText(clienteEditado.getAniversario());
+        Rg.setText(clienteEditado.getRg());
+        Cpf.setText(clienteEditado.getCpf());
+        Email.setText(clienteEditado.getEmail());
+        Telefone.setText(clienteEditado.getTelefone());
+        Endereco.setText(clienteEditado.getRua() + ", " + clienteEditado.getNumero() + ", " + clienteEditado.getCep() + ", " + clienteEditado.getBairro() + ", " + clienteEditado.getCidade() + ", " + clienteEditado.getEstado());
 
     }
 

@@ -5,29 +5,19 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.os.Bundle;
 
 import java.util.List;
 
-import br.com.pontocertosportes.pontocertoesportes.Activity.ListClientsActivity;
-import br.com.pontocertosportes.pontocertoesportes.Activity.LoginActivity;
-import br.com.pontocertosportes.pontocertoesportes.Activity.ViewClientActivity;
 import br.com.pontocertosportes.pontocertoesportes.DAO.ClientDAO;
 import br.com.pontocertosportes.pontocertoesportes.Model.Clients;
 import br.com.pontocertosportes.pontocertoesportes.R;
-
-import static br.com.pontocertosportes.pontocertoesportes.R.layout.adapter_list_clients;
-import static br.com.pontocertosportes.pontocertoesportes.R.layout.adapter_list_product;
 
 public class ClientAdapter extends RecyclerView.Adapter<ClientAdapter.MyViewHolder>  {
 
@@ -59,7 +49,7 @@ public class ClientAdapter extends RecyclerView.Adapter<ClientAdapter.MyViewHold
         holder.id.setText("ID: "+ clients.getId());
         holder.name.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v){
-                editClient = clients;
+
             }
         });
         holder.id.setOnClickListener(new Button.OnClickListener(){

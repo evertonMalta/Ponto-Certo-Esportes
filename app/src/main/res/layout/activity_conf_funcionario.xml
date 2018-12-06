@@ -132,7 +132,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditTextCategoriaProduto" />
+        app:layout_constraintTop_toBottomOf="@+id/EditTextEmailFuncionario" />
 
     <EditText
         android:id="@+id/EditTextNumeroFuncionario"
@@ -152,7 +152,7 @@
         app:layout_constraintTop_toBottomOf="@+id/LblDescQuantidadeProduto" />
 
     <EditText
-        android:id="@+id/EditTextPrecoProduto"
+        android:id="@+id/EditTextRuaFuncionario"
         android:layout_width="116dp"
         android:layout_height="27dp"
         android:layout_marginStart="16dp"
@@ -192,7 +192,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditTextPrecoProduto" />
+        app:layout_constraintTop_toBottomOf="@+id/EditTextRuaFuncionario" />
 
     <EditText
         android:id="@+id/EditTextCidadeFuncionario"
@@ -243,7 +243,7 @@
         app:layout_constraintTop_toBottomOf="@+id/EditTextCPFFuncionario" />
 
     <EditText
-        android:id="@+id/EditTextTamanhoProduto"
+        android:id="@+id/EditTextTelefoneFuncionario"
         android:layout_width="133dp"
         android:layout_height="27dp"
         android:layout_marginEnd="16dp"
@@ -269,10 +269,10 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditTextNomeProduto" />
+        app:layout_constraintTop_toBottomOf="@+id/EditTextRgFuncionario" />
 
     <EditText
-        android:id="@+id/EditTextCategoriaProduto"
+        android:id="@+id/EditTextEmailFuncionario"
         android:layout_width="145dp"
         android:layout_height="27dp"
         android:layout_marginStart="16dp"
@@ -328,7 +328,7 @@
         app:layout_constraintTop_toBottomOf="@+id/EditTextNomeFuncionario" />
 
     <EditText
-        android:id="@+id/EditTextNomeProduto"
+        android:id="@+id/EditTextRgFuncionario"
         android:layout_width="133dp"
         android:layout_height="27dp"
         android:layout_marginStart="16dp"

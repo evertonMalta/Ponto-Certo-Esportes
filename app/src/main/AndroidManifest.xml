@@ -38,7 +38,8 @@
         <activity android:name=".Activity.ViewProdutoActivity" />
         <activity android:name=".Activity.ConfEstoqueActivity" />
         <activity android:name=".Activity.ConfProductActivity" />
-        <activity android:name=".Activity.SelectIconUser"></activity>
+        <activity android:name=".Activity.SelectIconUser" />
+        <activity android:name=".Activity.realizarVendas" />
     </application>
 
 </manifest>

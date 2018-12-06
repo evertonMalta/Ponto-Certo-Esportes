@@ -24,6 +24,7 @@ public class HomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         String nameUsuario = "user";
@@ -50,18 +51,19 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
     public void openFornecedores(View view){
-        Intent intentFornecedores = new Intent(this, ListFornecedoresActivity.class);
-        startActivity(intentFornecedores);
+        Intent intent = new Intent(HomeActivity.this, ListFornecedoresActivity.class);
+        startActivity(intent);
     }
 
     public void openFuncionario(View view){
-        Intent intent = new Intent(this, ConfFuncionarioActivity.class);
+        Intent intent = new Intent(this, ListFuncionariosActivity.class);
         startActivity(intent);
     }
 
     public void openRealizarVenda(View view){
-        Intent intent = new Intent(this, ConfClienteActivity.class);
+        Intent intent = new Intent(this, realizarVendas.class);
         startActivity(intent);
     }
 

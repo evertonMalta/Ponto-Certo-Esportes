@@ -8,25 +8,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.pontocertosportes.pontocertoesportes.Banco.DbGateway;
-import br.com.pontocertosportes.pontocertoesportes.Model.Fornecedores;
+import br.com.pontocertosportes.pontocertoesportes.Model.Funcionarios;
 
-public class FornecedorDAO {
+public class FuncionarioDAO {
 
-    private final String TABLE_FORNECEDOR = "Fornecedor";
+    private final String TABLE_FUNCIONARIOS = "Funcionario";
     private DbGateway gw;
 
-    public FornecedorDAO(Context ctx){
+    public FuncionarioDAO(Context ctx){
         gw = DbGateway.getInstance(ctx);
     }
 
-    public List<Fornecedores> retornarTodos(){
-        List<Fornecedores> fornecedores = new ArrayList<>();
-        Cursor cursor = gw.getDatabase().rawQuery("SELECT * FROM Fornecedor", null);
+    public List<Funcionarios> retornarTodos(){
+        List<Funcionarios> funcionarios = new ArrayList<>();
+        Cursor cursor = gw.getDatabase().rawQuery("SELECT * FROM Funcionario", null);
         while(cursor.moveToNext()){
             int id = cursor.getInt(cursor.getColumnIndex("ID"));
             String nome = cursor.getString(cursor.getColumnIndex("Nome"));
-            String Cnpj = cursor.getString(cursor.getColumnIndex("Cnpj"));
-            String DtaInauguracao = cursor.getString(cursor.getColumnIndex("DtaInauguracao"));
+            String Cpf = cursor.getString(cursor.getColumnIndex("Cpf"));
+            String Rg = cursor.getString(cursor.getColumnIndex("Rg"));
+            String Aniversario = cursor.getString(cursor.getColumnIndex("Aniversario"));
             String Telefone = cursor.getString(cursor.getColumnIndex("Telefone"));
             String Email = cursor.getString(cursor.getColumnIndex("Email"));
             String Rua = cursor.getString(cursor.getColumnIndex("Rua"));
@@ -36,19 +37,20 @@ public class FornecedorDAO {
             String cidade = cursor.getString(cursor.getColumnIndex("Cidade"));
             String estado = cursor.getString(cursor.getColumnIndex("Estado"));
 
-            fornecedores.add(new Fornecedores(id, nome,Cnpj,DtaInauguracao,Telefone,Email,Rua,numero,bairro,cep,cidade,estado ));
+            funcionarios.add(new Funcionarios(id, nome,Cpf,Rg,Aniversario,Telefone,Email,Rua,numero,bairro,cep,cidade,estado ));
         }
         cursor.close();
-        return fornecedores;
+        return funcionarios;
     }
 
-    public Fornecedores retornarUltimo(){
-        Cursor cursor = gw.getDatabase().rawQuery("SELECT * FROM Fornecedor ORDER BY ID DESC", null);
+    public Funcionarios retornarUltimo(){
+        Cursor cursor = gw.getDatabase().rawQuery("SELECT * FROM Funcionario ORDER BY ID DESC", null);
         if(cursor.moveToFirst()){
             int id = cursor.getInt(cursor.getColumnIndex("ID"));
             String nome = cursor.getString(cursor.getColumnIndex("Nome"));
-            String Cnpj = cursor.getString(cursor.getColumnIndex("Cnpj"));
-            String DtaInauguracao = cursor.getString(cursor.getColumnIndex("DtaInauguracao"));
+            String Cpf = cursor.getString(cursor.getColumnIndex("Cpf"));
+            String Rg = cursor.getString(cursor.getColumnIndex("Rg"));
+            String Aniversario = cursor.getString(cursor.getColumnIndex("Aniversario"));
             String Telefone = cursor.getString(cursor.getColumnIndex("Telefone"));
             String Email = cursor.getString(cursor.getColumnIndex("Email"));
             String Rua = cursor.getString(cursor.getColumnIndex("Rua"));
@@ -58,7 +60,7 @@ public class FornecedorDAO {
             String cidade = cursor.getString(cursor.getColumnIndex("Cidade"));
             String estado = cursor.getString(cursor.getColumnIndex("Estado"));
             cursor.close();
-            return new Fornecedores(id, nome,Cnpj,DtaInauguracao,Telefone,Email,Rua,numero,bairro,cep,cidade,estado );
+            return new Funcionarios(id, nome,Cpf,Rg,Aniversario,Telefone,Email,Rua,numero,bairro,cep,cidade,estado );
         }
 
         return null;
@@ -66,15 +68,16 @@ public class FornecedorDAO {
 
 
 
-    public boolean salvar(String nome, String Cnpj, String DtaInauguracao, String Telefone, String Email,String Rua, String numero, String bairro,String cep, String cidade,String estado){
-        return salvar(0, nome,Cnpj,DtaInauguracao,Telefone,Email,Rua,numero,bairro,cep,cidade,estado);
+    public boolean salvar(String nome, String Cpf, String Rg, String Aniversario, String Telefone, String Email,String Rua, String numero, String bairro,String cep, String cidade,String estado){
+        return salvar(0, nome,Cpf,Rg,Aniversario,Telefone,Email,Rua,numero,bairro,cep,cidade,estado);
     }
 
-    public boolean salvar(int id, String nome, String cnpj, String DtaInauguracao, String telefone, String email,String rua, String numero, String bairro, String cep,String cidade,String estado){
+    public boolean salvar(int id, String nome, String cpf, String rg, String aniversario, String telefone, String email,String rua, String numero, String bairro, String cep,String cidade,String estado){
         ContentValues cv = new ContentValues();
         cv.put("Nome", nome);
-        cv.put("Cnpj", cnpj);
-        cv.put("DtaInauguracao", DtaInauguracao);
+        cv.put("Cpf", cpf);
+        cv.put("Rg", rg);
+        cv.put("Aniversario", aniversario);
         cv.put("Telefone", telefone);
         cv.put("Email", email);
         cv.put("Rua",rua);
@@ -85,12 +88,12 @@ public class FornecedorDAO {
         cv.put("Estado", estado);
 
         if(id > 0)
-            return gw.getDatabase().update(TABLE_FORNECEDOR, cv, "ID=?", new String[]{ id + "" }) > 0;
+            return gw.getDatabase().update(TABLE_FUNCIONARIOS, cv, "ID=?", new String[]{ id + "" }) > 0;
         else
-            return gw.getDatabase().insert(TABLE_FORNECEDOR, null, cv) > 0;
+            return gw.getDatabase().insert(TABLE_FUNCIONARIOS, null, cv) > 0;
     }
 
     public boolean excluir(int id){
-        return gw.getDatabase().delete(TABLE_FORNECEDOR, "ID=?", new String[]{ id + "" }) > 0;
+        return gw.getDatabase().delete(TABLE_FUNCIONARIOS, "ID=?", new String[]{ id + "" }) > 0;
     }
 }

@@ -31,7 +31,6 @@ public class ConfFornecedorActivity extends AppCompatActivity {
     EditText estadoFornecedor;
 
     int id = 0;
-    private List<Fornecedores> listaFornecedor = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 

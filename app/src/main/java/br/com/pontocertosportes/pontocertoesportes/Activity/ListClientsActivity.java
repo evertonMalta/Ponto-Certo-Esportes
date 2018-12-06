@@ -11,14 +11,12 @@ import android.view.View;
 import java.util.List;
 
 import br.com.pontocertosportes.pontocertoesportes.Adapter.ClientAdapter;
-import br.com.pontocertosportes.pontocertoesportes.Adapter.ProductAdapter;
 import br.com.pontocertosportes.pontocertoesportes.DAO.ClientDAO;
-import br.com.pontocertosportes.pontocertoesportes.Model.Clients;
+
 import br.com.pontocertosportes.pontocertoesportes.R;
 
 public class ListClientsActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
-    private List<Clients> listaDeClientes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
