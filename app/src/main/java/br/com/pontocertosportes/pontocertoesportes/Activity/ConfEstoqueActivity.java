@@ -91,7 +91,7 @@ public class ConfEstoqueActivity extends AppCompatActivity {
         //Salvando os dados
         ProdutoDAO dao = new ProdutoDAO(getBaseContext());
         ProdutoDAO produtoDAO = new ProdutoDAO(this);
-        ProductAdapter adapter = new ProductAdapter(produtoDAO.retornarTodos());
+        ProductAdapter adapter = new ProductAdapter(produtoDAO.retornarTodos(), this);
 
         boolean sucesso;
         if (produtoEditado != null)

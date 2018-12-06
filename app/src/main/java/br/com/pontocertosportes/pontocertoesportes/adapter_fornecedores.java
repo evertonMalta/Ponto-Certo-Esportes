@@ -1,12 +1,13 @@
-package br.com.pontocertosportes.pontocertoesportes.Adapter;
+package br.com.pontocertosportes.pontocertoesportes;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,51 +17,40 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import br.com.pontocertosportes.pontocertoesportes.Activity.ViewProdutoActivity;
-import br.com.pontocertosportes.pontocertoesportes.DAO.ProdutoDAO;
-import br.com.pontocertosportes.pontocertoesportes.Model.Product;
-import br.com.pontocertosportes.pontocertoesportes.R;
+import br.com.pontocertosportes.pontocertoesportes.DAO.FornecedorDAO;
+import br.com.pontocertosportes.pontocertoesportes.Model.Fornecedores;
 
-public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHolder> {
+public class adapter_fornecedores extends RecyclerView.Adapter<adapter_fornecedores.MyViewHolder>  {
 
-    private List<Product> listaProdutos;
-    String produto = null;
-    private final Context context;
+    private final List<Fornecedores> listaFornecedores;
+    String fornecedores = null;
 
-    public ProductAdapter(final List<Product> list, final Context context) {
-        this.listaProdutos = list;
-        this.context = context;
+    public adapter_fornecedores(List<Fornecedores> list) {
+        this.listaFornecedores=list;
     }
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return new MyViewHolder(LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.adapter_list_product, parent, false));
-
+                .inflate(R.layout.adapter_list_fornecedores, parent, false));
 
     }
 
-    public Product produtoEditado = null;
+    public Fornecedores fornecedorEditado = null;
 
-    public Product editProduct = null;
+    public Fornecedores editFornecedor = null;
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
 
-        final Product product = listaProdutos.get(position);
+        final Fornecedores fornecedores = listaFornecedores.get(position);
 
-        holder.name.setText(product.getName());
-        holder.categoria.setText("Categoria: "+ product.getCategoria());
-        holder.id.setText("ID: "+ product.getID());
+        holder.name.setText(fornecedores.getName());
+        holder.cnpj.setText("CNPJ: "+ fornecedores.getCnpj());
+        holder.id.setText("ID: "+ fornecedores.getId());
         holder.name.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v){
-                final View view = v;
-                ProdutoDAO dao = new ProdutoDAO(view.getContext());
-                Product products = dao.selecionar(product.getID());
-                ViewProdutoActivity viewActivity = new ViewProdutoActivity(products);
-                Intent intent = new Intent(context, ViewProdutoActivity.class);
-                context.startActivity(intent);
-                //listClientsActivity.openAddNewClient();
+                editFornecedor = fornecedores;
             }
         });
         holder.id.setOnClickListener(new Button.OnClickListener(){
@@ -68,18 +58,18 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
                 final View view = v;
                 AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
                 builder.setTitle("Confirmacao")
-                        .setMessage("Tem certeza que deseja excluir esse produto?")
+                        .setMessage("Tem certeza que deseja excluir esse fornecedor?")
                         .setPositiveButton("Excluir", new DialogInterface.OnClickListener(){
                             public void onClick(DialogInterface dialog, int which){
-                                ProdutoDAO dao = new ProdutoDAO(view.getContext());
-                                boolean sucesso = dao.excluir(product.getID());
+                                FornecedorDAO dao = new FornecedorDAO(view.getContext());
+                                boolean sucesso = dao.excluir(fornecedores.getId());
 
                                 if (sucesso) {
-                                    removerProduto(product);
+                                    removerFornecedor(fornecedores);
                                     Snackbar.make(view, "Excluiu!", Snackbar.LENGTH_LONG)
                                             .setAction("Action", null).show();
                                 }else{
-                                    Snackbar.make(view, "Erro ao excluir o produto!", Snackbar.LENGTH_LONG)
+                                    Snackbar.make(view, "Erro ao excluir o fornecedor!", Snackbar.LENGTH_LONG)
                                             .setAction("Action", null).show();
                                 }
                             }
@@ -90,21 +80,21 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
             }
         });
     }
-    public void atualizarProduto(Product product){
-        listaProdutos.set(listaProdutos.indexOf(product), product);
-        notifyItemChanged(listaProdutos.indexOf(product));
+    public void atualizarFornecedor(Fornecedores fornecedor){
+        listaFornecedores.set(listaFornecedores.indexOf(fornecedor), fornecedor);
+        notifyItemChanged(listaFornecedores.indexOf(fornecedor));
     }
 
-    public void removerProduto(Product product){
-        int position = listaProdutos.indexOf(product);
-        listaProdutos.remove(position);
+    public void removerFornecedor(Fornecedores fornecedor){
+        int position = listaFornecedores.indexOf(fornecedor);
+        listaFornecedores.remove(position);
         notifyItemRemoved(position);
     }
 
     @Override
     public int getItemCount() {
         try{
-            return this.listaProdutos.size();
+            return this.listaFornecedores.size();
         }catch (Exception e) {
             return 0;
         }
@@ -112,8 +102,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
 
 
 
-    public void adicionarProdutos(Product product){
-        this.listaProdutos.add(product);
+    public void adicionarFornecedores(Fornecedores fornecedor){
+        this.listaFornecedores.add(fornecedor);
         notifyItemInserted(getItemCount());
     }
 
@@ -132,15 +122,15 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
         TextView name;
-        TextView categoria ;
+        TextView cnpj ;
         TextView id;
 
         public MyViewHolder( View itemView){
             super(itemView);
 
-            name = itemView.findViewById(R.id.listNameProduct);
-            categoria = itemView.findViewById(R.id.listCategoriaProduct);
-            id = itemView.findViewById(R.id.listIdProduct);
+            name = itemView.findViewById(R.id.listNameFornecedor);
+            cnpj = itemView.findViewById(R.id.listCnpjFornecedor);
+            id = itemView.findViewById(R.id.listIdFornecedor);
 
         }
     }

@@ -110,7 +110,7 @@ public class ConfClienteActivity extends AppCompatActivity {
         //Salvando os dados
         ClientDAO dao = new ClientDAO(getBaseContext());
         ClientDAO ClientDao = new ClientDAO(this);
-        ClientAdapter adapter = new ClientAdapter(ClientDao.retornarTodos());
+        ClientAdapter adapter = new ClientAdapter(ClientDao.retornarTodos(),this);
 
         boolean sucesso;
         if (clienteEditado != null)

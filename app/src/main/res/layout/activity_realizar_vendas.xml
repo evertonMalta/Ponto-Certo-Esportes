@@ -203,6 +203,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/adicionar_btn"
+        android:onClick="AdicionouProduto"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -211,17 +212,18 @@
         android:layout_width="408dp"
         android:layout_height="13dp"
         android:layout_marginTop="8dp"
+
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextQuantidadeProdutoVenda"
-        app:srcCompat="@drawable/divisor"
-        tools:layout_editor_absoluteX="0dp" />
+        app:srcCompat="@drawable/divisor" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="415dp"
         android:layout_height="8dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewTotalVendas"
-        app:srcCompat="@drawable/divisor"
-        tools:layout_editor_absoluteX="0dp" />
+        app:srcCompat="@drawable/divisor" />
 
     <TextView
         android:id="@+id/textView11"
@@ -274,7 +276,11 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/btn_salvar"
+        android:background="@drawable/tbx_estado"
+        android:text="Concluir Compra"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:onClick = "Comprar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

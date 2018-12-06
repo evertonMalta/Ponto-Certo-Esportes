@@ -53,12 +53,12 @@ public class HomeActivity extends AppCompatActivity {
 
 
     public void openFornecedores(View view){
-        Intent intent = new Intent(HomeActivity.this, ListFornecedoresActivity.class);
+        Intent intent = new Intent(HomeActivity.this, list_fornecedores.class);
         startActivity(intent);
     }
 
     public void openFuncionario(View view){
-        Intent intent = new Intent(this, ListFuncionariosActivity.class);
+        Intent intent = new Intent(HomeActivity.this, ListFuncionariosActivity.class);
         startActivity(intent);
     }
 

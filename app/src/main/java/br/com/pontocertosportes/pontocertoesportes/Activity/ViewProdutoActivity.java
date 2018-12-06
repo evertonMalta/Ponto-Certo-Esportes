@@ -20,6 +20,32 @@ public class ViewProdutoActivity extends AppCompatActivity {
     TextView Quantidade;
     TextView Preco;
 
+
+    String NomeProduct;
+    String DtaCompraProduct;
+    String CategoriaProduct;
+    String DescricaoProduct;
+    int TamanhoProduct;
+    int QuantidadeProduct;
+    Double PrecoProduct;
+
+    Product produto;
+
+    public ViewProdutoActivity(Product productSelecionado) {
+
+
+        NomeProduct = productSelecionado.getName();
+        DtaCompraProduct = productSelecionado.getDataCompra();
+        CategoriaProduct = productSelecionado.getCategoria();
+        DescricaoProduct = productSelecionado.getDescricao();
+        TamanhoProduct = productSelecionado.getTamanho();
+        QuantidadeProduct = productSelecionado.getQuantidade();
+        PrecoProduct = productSelecionado.getPreco() ;
+
+        produto = productSelecionado;
+
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_view_produto);
@@ -30,18 +56,14 @@ public class ViewProdutoActivity extends AppCompatActivity {
         Tamanho = (TextView) findViewById(R.id.TamanhoTextProduto);
         Quantidade = (TextView) findViewById(R.id.QuantidadeTextProduto);
         Preco = (TextView) findViewById(R.id.PrecoTextProduto);
-        Intent intent = getIntent();
 
-
-
-        produtoEditado = (Product) getIntent().getExtras().get("cliente");
-        Nome.setText(produtoEditado.getName());
-        DtaCompra.setText(produtoEditado.getDataCompra());
-        Categoria.setText(produtoEditado.getCategoria());
-        Descricao.setText(produtoEditado.getDescricao());
-        Tamanho.setText(produtoEditado.getTamanho());
-        Quantidade.setText(produtoEditado.getQuantidade());
-        Preco.setText("" + produtoEditado.getPreco());
+        Nome.setText(NomeProduct);
+        DtaCompra.setText(DtaCompraProduct);
+        Categoria.setText(CategoriaProduct);
+        Descricao.setText(DescricaoProduct);
+        Tamanho.setText(TamanhoProduct);
+        Quantidade.setText(QuantidadeProduct);
+        Preco.setText("" + PrecoProduct);
 
     }
 

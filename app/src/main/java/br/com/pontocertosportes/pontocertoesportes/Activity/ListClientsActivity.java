@@ -18,6 +18,8 @@ import br.com.pontocertosportes.pontocertoesportes.R;
 public class ListClientsActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +28,7 @@ public class ListClientsActivity extends AppCompatActivity {
         //listagem porodutos
         //configuração do adapter
         ClientDAO dao = new ClientDAO(this);
-        ClientAdapter adapter = new ClientAdapter(dao.retornarTodos());
+        ClientAdapter adapter = new ClientAdapter(dao.retornarTodos(),ListClientsActivity.this);
         //configuração do Recicle View
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);

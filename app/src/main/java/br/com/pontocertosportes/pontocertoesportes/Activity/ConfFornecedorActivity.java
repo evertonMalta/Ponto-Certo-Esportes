@@ -15,6 +15,7 @@ import br.com.pontocertosportes.pontocertoesportes.Adapter.FornecedorAdapter;
 import br.com.pontocertosportes.pontocertoesportes.DAO.FornecedorDAO;
 import br.com.pontocertosportes.pontocertoesportes.Model.Fornecedores;
 import br.com.pontocertosportes.pontocertoesportes.R;
+import br.com.pontocertosportes.pontocertoesportes.adapter_fornecedores;
 
 public class ConfFornecedorActivity extends AppCompatActivity {
 
@@ -105,7 +106,7 @@ public class ConfFornecedorActivity extends AppCompatActivity {
         //Salvando os dados
         FornecedorDAO dao = new FornecedorDAO(getBaseContext());
         FornecedorDAO fornecedorDao = new FornecedorDAO(this);
-        FornecedorAdapter adapter = new FornecedorAdapter(fornecedorDao.retornarTodos());
+        adapter_fornecedores adapter = new adapter_fornecedores(fornecedorDao.retornarTodos());
 
         boolean sucesso;
         if (fornecedorEditado != null)
@@ -136,7 +137,7 @@ public class ConfFornecedorActivity extends AppCompatActivity {
 
             Snackbar.make(view, "Salvou!", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show();
-            startActivity(new Intent(this, ListFornecedoresActivity.class));
+            startActivity(new Intent(this, list_fornecedores.class));
         }else{
             Snackbar.make(view, "Erro ao salvar, consulte os logs!", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show();

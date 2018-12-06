@@ -20,6 +20,32 @@ public class ViewClientActivity extends AppCompatActivity {
     TextView Telefone;
     TextView Endereco;
 
+    String NomeClient;
+    String AniversarioClient;
+    String RgClient;
+    String CpfClient;
+    String EmailClient;
+    String TelefoneClient;
+    String EnderecoClient;
+
+    Clients cliente;
+
+
+    public ViewClientActivity(Clients clientSelecionado) {
+
+
+        NomeClient = clientSelecionado.getName();
+        AniversarioClient = clientSelecionado.getAniversario();
+        RgClient = clientSelecionado.getRg();
+        CpfClient = clientSelecionado.getCpf();
+        EmailClient = clientSelecionado.getEmail();
+        TelefoneClient = clientSelecionado.getEmail();
+        EnderecoClient = clientSelecionado.getRua() + ", " + clientSelecionado.getNumero() + ", " + clientSelecionado.getCep() + ", " + clientSelecionado.getBairro() + ", " + clientSelecionado.getCidade() + ", " + clientSelecionado.getEstado();
+
+        cliente = clientSelecionado;
+
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_view_client);
@@ -30,16 +56,16 @@ public class ViewClientActivity extends AppCompatActivity {
         Email = (TextView) findViewById(R.id.EmailTxtCliente);
         Telefone = (TextView) findViewById(R.id.TelefoneTxtCliente);
         Endereco = (TextView) findViewById(R.id.EnderecoTxtCliente);
-        Intent intent = getIntent();
 
-        clienteEditado = (Clients) getIntent().getExtras().get("cliente");
-        Nome.setText(clienteEditado.getName());
-        Aniversario.setText(clienteEditado.getAniversario());
-        Rg.setText(clienteEditado.getRg());
-        Cpf.setText(clienteEditado.getCpf());
-        Email.setText(clienteEditado.getEmail());
-        Telefone.setText(clienteEditado.getTelefone());
-        Endereco.setText(clienteEditado.getRua() + ", " + clienteEditado.getNumero() + ", " + clienteEditado.getCep() + ", " + clienteEditado.getBairro() + ", " + clienteEditado.getCidade() + ", " + clienteEditado.getEstado());
+
+        Nome.setText(cliente.getName());
+        Aniversario.setText(cliente.getAniversario());
+        Rg.setText(cliente.getRg());
+        Cpf.setText(cliente.getCpf());
+        Email.setText(cliente.getEmail());
+        Telefone.setText(cliente.getTelefone());
+        Endereco.setText(cliente.getRua() + ", " + cliente.getNumero() + ", " + cliente.getCep() + ", " + cliente.getBairro() + ", " + cliente.getCidade() + ", " + cliente.getEstado());
+
 
     }
 

@@ -3,6 +3,7 @@ package br.com.pontocertosportes.pontocertoesportes.DAO;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +12,6 @@ import br.com.pontocertosportes.pontocertoesportes.Banco.DbGateway;
 import br.com.pontocertosportes.pontocertoesportes.Model.Product;
 
 public class ProdutoDAO {
-
 
     private final String TABLE_PRODUTOS = "Produtos";
     private DbGateway gw;
@@ -81,5 +81,30 @@ public class ProdutoDAO {
 
     public boolean excluir(int id){
         return gw.getDatabase().delete(TABLE_PRODUTOS, "ID=?", new String[]{ id + "" }) > 0;
+    }
+
+    public Product selecionar(int id){
+        Product product = new Product();
+        SQLiteDatabase db = gw.getDatabase();
+
+        Cursor cursor = db.query(TABLE_PRODUTOS, new String[]{"ID", "Nome", "DtaCompra", "Categoria", "Descricao", "Tamanho", "Quantidade", "Preco"}, "ID=?", new String[]{String.valueOf(id)}, null, null, null, null);
+
+        if(cursor != null){
+            cursor.moveToFirst();
+            if (cursor.getCount() > 0){
+                product.setID(cursor.getInt(0));
+                product.setName(cursor.getString(1));
+                product.setDataCompra(cursor.getString(2));
+                product.setCategoria(cursor.getString(3));
+                product.setDescricao(cursor.getString(4));
+                product.setTamanho(cursor.getInt(5));
+                product.setQuantidade(cursor.getInt(6));
+                product.setPreco(cursor.getDouble(7));
+            }else{
+                return null;
+            }
+        }
+        db.close();
+        return product;
     }
 }
