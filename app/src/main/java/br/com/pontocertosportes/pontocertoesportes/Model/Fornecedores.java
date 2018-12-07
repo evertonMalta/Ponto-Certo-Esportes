@@ -1,11 +1,6 @@
 package br.com.pontocertosportes.pontocertoesportes.Model;
 
-
 import java.io.Serializable;
-
-
-public class Fornecedores extends Endereco{
-
 
 public class Fornecedores implements Serializable {
     private int id;
@@ -42,6 +37,8 @@ public class Fornecedores implements Serializable {
         this.cidade = cidade;
         this.estado = estado;
     }
+
+
 
     public int getId() {
         return id;
@@ -139,10 +136,8 @@ public class Fornecedores implements Serializable {
         this.estado = estado;
     }
 
-
     public boolean equals(Object o) { return this.id == ((Fornecedores)o).id;}
 
     public int hashCode(){ return this.id;}
-
 
 }

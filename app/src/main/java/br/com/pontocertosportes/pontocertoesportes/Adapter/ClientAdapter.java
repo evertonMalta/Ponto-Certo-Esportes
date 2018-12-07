@@ -28,7 +28,7 @@ public class ClientAdapter extends RecyclerView.Adapter<ClientAdapter.MyViewHold
     String cliente = null;
     private final Context context;
 
-    public ClientAdapter(final List<Clients> list, final Context context) {
+    public ClientAdapter(final List<Clients> list,final Context context) {
         this.listaClientes = list;
         this.context = context;
     }
@@ -57,10 +57,11 @@ public class ClientAdapter extends RecyclerView.Adapter<ClientAdapter.MyViewHold
                 final View view = v;
                 ClientDAO dao = new ClientDAO(view.getContext());
                 Clients client = dao.selecionar(clients.getId());
-                ViewClientActivity viewActivity = new ViewClientActivity(client);
+                //ViewClientActivity viewActivity = new ViewClientActivity(client);
                 Intent intent = new Intent(context, ViewClientActivity.class);
+                intent.putExtra("id",client.getId());
+
                 context.startActivity(intent);
-                //listClientsActivity.openAddNewClient();
             }
         });
         holder.id.setOnClickListener(new Button.OnClickListener(){

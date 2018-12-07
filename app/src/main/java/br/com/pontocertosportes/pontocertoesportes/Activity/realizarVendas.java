@@ -8,9 +8,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import br.com.pontocertosportes.pontocertoesportes.DAO.ClientDAO;
+import br.com.pontocertosportes.pontocertoesportes.Model.Clients;
 import br.com.pontocertosportes.pontocertoesportes.R;
 
 public class realizarVendas extends AppCompatActivity {
+
+    public Clients clients;
 
     public EditText NomeClient;
     public EditText CpfClient;

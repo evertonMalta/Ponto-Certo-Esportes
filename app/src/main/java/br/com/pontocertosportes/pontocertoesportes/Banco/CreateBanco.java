@@ -2,7 +2,6 @@ package br.com.pontocertosportes.pontocertoesportes.Banco;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.text.NoCopySpan;
 
 import br.com.pontocertosportes.pontocertoesportes.DAO.ProdutoDAO;
 
@@ -10,9 +9,6 @@ public class CreateBanco extends SQLiteOpenHelper{
 
     private static final String DATABASE_NAME = "SISBD";
     private static final int DATABASE_VERSION = 2;
-
-
-
     private final String CREATE_TABLEClient = "CREATE TABLE Clientes " +
             "(ID INTEGER PRIMARY KEY AUTOINCREMENT," +
             " Nome TEXT NOT NULL," +
@@ -73,41 +69,16 @@ public class CreateBanco extends SQLiteOpenHelper{
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
-
-      private String query;
-    private String tabela;
-
-
-    public  CreateBanco(Context context, String tabela, String query){
-        super(context, DATABASE_NAME, null,DATABASE_VERSION);
-        this.tabela = tabela;
-        this.query = query;
-
-
-    }
-
     @Override
     public void onCreate(SQLiteDatabase db) {
-
         db.execSQL(CREATE_TABLEClient);
         db.execSQL(CREATE_TABLEProduct);
         db.execSQL(CREATE_TABLEFuncionario);
         db.execSQL(CREATE_TABLEFornecedor);
-
-        db.execSQL(query);
-
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
-        db.execSQL("drop table if exists "+ this.tabela);
-        onCreate(db);
-    }
-
-
-
-    public void setQuery(String query) {
-        this.query = query;
     }
 }

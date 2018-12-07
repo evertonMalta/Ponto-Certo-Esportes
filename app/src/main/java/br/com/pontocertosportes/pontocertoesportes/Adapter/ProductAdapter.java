@@ -63,7 +63,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
                 //listClientsActivity.openAddNewClient();
             }
         });
-        holder.id.setOnClickListener(new Button.OnClickListener(){
+        holder.name.setOnClickListener(new Button.OnClickListener(){
             public void onClick(View v){
                 final View view = v;
                 AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());

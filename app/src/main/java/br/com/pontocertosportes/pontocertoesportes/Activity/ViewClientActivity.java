@@ -3,10 +3,13 @@ package br.com.pontocertosportes.pontocertoesportes.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import br.com.pontocertosportes.pontocertoesportes.Adapter.ClientAdapter;
+import br.com.pontocertosportes.pontocertoesportes.DAO.ClientDAO;
 import br.com.pontocertosportes.pontocertoesportes.Model.Clients;
 import br.com.pontocertosportes.pontocertoesportes.R;
 
@@ -30,7 +33,7 @@ public class ViewClientActivity extends AppCompatActivity {
 
     Clients cliente;
 
-
+/*
     public ViewClientActivity(Clients clientSelecionado) {
 
 
@@ -45,10 +48,11 @@ public class ViewClientActivity extends AppCompatActivity {
         cliente = clientSelecionado;
 
 
-    }
+    }*/
+    int id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setContentView(R.layout.activity_view_client);
+        super.onCreate(savedInstanceState);
         Nome = (TextView) findViewById(R.id.NameTxtCliente);
         Aniversario = (TextView) findViewById(R.id.AniversarioTxtCliente);
         Rg = (TextView) findViewById(R.id.RgTxtCliente);
@@ -57,6 +61,17 @@ public class ViewClientActivity extends AppCompatActivity {
         Telefone = (TextView) findViewById(R.id.TelefoneTxtCliente);
         Endereco = (TextView) findViewById(R.id.EnderecoTxtCliente);
 
+        setContentView(R.layout.activity_view_client);
+        Intent intent = getIntent();
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            id = bundle.getInt("id");
+        }else{
+            id = 0;
+        }
+        ClientDAO clienteDao = new ClientDAO(this);
+        cliente = clienteDao.selecionar(id);
+        //
 
         Nome.setText(cliente.getName());
         Aniversario.setText(cliente.getAniversario());

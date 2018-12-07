@@ -21,7 +21,6 @@ public class Funcionarios extends Endereco{
     }
 
 
-
     public Funcionarios( int id, String name, String cpf, String rg, String aniversario, String email, String telefone, String rua, String numero, String cep, String bairro, String cidade, String estado) {
         this.id = id;
         this.name = name;

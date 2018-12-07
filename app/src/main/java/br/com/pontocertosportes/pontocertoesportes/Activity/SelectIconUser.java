@@ -8,7 +8,6 @@ import br.com.pontocertosportes.pontocertoesportes.R;
 
 public class SelectIconUser extends AppCompatActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +20,7 @@ public class SelectIconUser extends AppCompatActivity {
 
     public void selectImage(){
 
+        String ata;
     }
 
     public void cancel(){

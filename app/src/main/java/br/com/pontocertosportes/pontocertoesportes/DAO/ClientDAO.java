@@ -12,72 +12,8 @@ import java.util.List;
 import br.com.pontocertosportes.pontocertoesportes.Activity.ViewClientActivity;
 import br.com.pontocertosportes.pontocertoesportes.Banco.DbGateway;
 import br.com.pontocertosportes.pontocertoesportes.Model.Clients;
-<<<<<<< HEAD
-import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
-=======
 
->>>>>>> b3db1ee8c60ab76f9ed69a5b6e9f5e302eaeb52f
-import android.widget.Toast;
-
-import br.com.pontocertosportes.pontocertoesportes.Banco.CreateBanco;
-import br.com.pontocertosportes.pontocertoesportes.Model.Clients;
-
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> b3db1ee8c60ab76f9ed69a5b6e9f5e302eaeb52f
 public class ClientDAO {
-    private final static String TABELA = "Cliente";
-    private CreateBanco banco;
-    private SQLiteDatabase db;
-    private String queryCriarTabela= "CREATE TABLE "+TABELA + "(" +
-            "idCliente integer NOT NULL primary key autoincrement," +
-            "nome TEXT NOT NULL," +
-            "cpf TEXT NOT NULL,rg TEXT NOT NULL," +
-            "aniversario TEXT NOT NULL," +
-            "email TEXT NOT NULL," +
-            "telefone TEXT NOT NULL," +
-            "rua TEXT NOT NULL," +
-            "numero TEXT NOT NULL," +
-            "cep TEXT NOT NULL," +
-            "bairro TEXT NOT NULL," +
-            "cidade TEXT NOT NULL," +
-            "estado TEXT NOT NULL)";
-
-<<<<<<< HEAD
-
-=======
-  
->>>>>>> b3db1ee8c60ab76f9ed69a5b6e9f5e302eaeb52f
-
-    public void InsertClient(Clients cliente){
-        String queryInsert ="INSERT INTO "+this.TABELA+" (nome,cpf, aniversario, telefone, rua, numero, cep, bairro, cidade,estado) VALUES ( "+
-                cliente.getName() +","+
-                cliente.getCpf() +","+
-                cliente.getAniversario()+","+
-                cliente.getTelefone() +","+
-                cliente.getRua() +","+
-                cliente.getNumero() +","+
-                cliente.getCep() +","+
-                cliente.getBairro() +","+
-                cliente.getCidade() +","+
-                cliente.getEstado() +")";
-
-
-            db = banco.getWritableDatabase();
-            db.execSQL(queryInsert);
-            db.close();
-
-
-
-
-
-    }
-
 
    private final String TABLE_CLIENTES = "Clientes";
    private DbGateway gw;

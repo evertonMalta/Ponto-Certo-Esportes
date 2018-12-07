@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import br.com.pontocertosportes.pontocertoesportes.R;
 
@@ -32,6 +33,8 @@ public class HomeActivity extends AppCompatActivity {
         nameUserTextView.setText(nameUsuario);
         imageUserImageView = findViewById(R.id.imageUser);
         //imageUserImageView.setImageResource(imagensIds[i]);
+
+
     }
 
     @Override
@@ -43,10 +46,6 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     //functions open activity`s
-    public void selectIconUser(View view){
-        Intent intent = new Intent(this, SelectIconUser.class);
-        startActivity(intent);
-    }
 
     public void openCliente(View view){
         Intent intent = new Intent(this, ListClientsActivity.class);
@@ -55,13 +54,17 @@ public class HomeActivity extends AppCompatActivity {
 
 
     public void openFornecedores(View view){
-        Intent intent = new Intent(HomeActivity.this, list_fornecedores.class);
-        startActivity(intent);
+       // Intent intent = new Intent(HomeActivity.this, list_fornecedores.class);
+        //startActivity(intent);
+        Toast toast = Toast.makeText(this, "Disponivel em breve. ", Toast.LENGTH_SHORT);
+        toast.show();
     }
 
     public void openFuncionario(View view){
-        Intent intent = new Intent(HomeActivity.this, ListFuncionariosActivity.class);
-        startActivity(intent);
+        //Intent intent = new Intent(HomeActivity.this, ListFuncionariosActivity.class);
+        //startActivity(intent);
+        Toast toast = Toast.makeText(this, "Disponivel em breve. ", Toast.LENGTH_SHORT);
+        toast.show();
     }
 
     public void openRealizarVenda(View view){

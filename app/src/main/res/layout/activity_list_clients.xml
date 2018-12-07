@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Activity.ListClientsActivity">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/textView6"
@@ -29,7 +28,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6">
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:listitem="@layout/adapter_list_clients"
+        >
 
     </android.support.v7.widget.RecyclerView>
 

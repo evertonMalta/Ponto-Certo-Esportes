@@ -51,21 +51,18 @@
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:layout_margin="11dp"
-                    android:alpha="0.3"
                     android:src="@drawable/alpinismo" />
 
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:layout_margin="11dp"
-                    android:alpha="0.3"
                     android:src="@drawable/basquete" />
 
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:layout_margin="11dp"
-                    android:alpha="0.3"
                     android:src="@drawable/boxe" />
 
             </LinearLayout>
@@ -82,21 +79,18 @@
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:layout_margin="11dp"
-                    android:alpha="0.3"
                     android:src="@drawable/ciclismo" />
 
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:layout_margin="11dp"
-                    android:alpha="0.3"
                     android:src="@drawable/corrida" />
 
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:layout_margin="11dp"
-                    android:alpha="0.3"
                     android:src="@drawable/corrida_de_carro" />
 
             </LinearLayout>
@@ -110,27 +104,23 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp">
 
-
-                <ImageButton
+                <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:layout_margin="11dp"
-                    android:alpha="0.3"
-                    android:background="@drawable/futebol" />
+                    android:src="@drawable/futebol" />
 
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:layout_margin="11dp"
-                    android:alpha="1"
                     android:src="@drawable/levantamento_peso" />
 
                 <ImageView
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:layout_margin="11dp"
-                    android:alpha="0.3"
-                    android:src="@drawable/tenis"/>
+                    android:src="@drawable/tenis" />
 
 
             </LinearLayout>

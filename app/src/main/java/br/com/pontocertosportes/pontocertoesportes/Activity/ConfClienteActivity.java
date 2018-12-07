@@ -6,15 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-
 import android.widget.Spinner;
-import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.List;
 
-
 import br.com.pontocertosportes.pontocertoesportes.Adapter.ClientAdapter;
-
 import br.com.pontocertosportes.pontocertoesportes.DAO.ClientDAO;
 import br.com.pontocertosportes.pontocertoesportes.Model.Clients;
 import br.com.pontocertosportes.pontocertoesportes.R;
@@ -35,7 +32,6 @@ public class ConfClienteActivity extends AppCompatActivity {
     EditText cidadeClient;
     EditText estadoClient;
 
-    ClientDAO clientDAO = new ClientDAO(getBaseContext());
     int id = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,12 +93,11 @@ public class ConfClienteActivity extends AppCompatActivity {
     }
 
     public void salvar(View view){
-
         //Pegando os valores
         String Nome = nomeClient.getText().toString();
+        String Aniversario = aniversarioClient.getText().toString();
         String Rg = rgClient.getText().toString();
         String Cpf = cpfClient.getText().toString();
-        String Aniversario = aniversarioClient.getText().toString();
         String Email = emailClient.getText().toString();
         String Telefone = telefoneClient.getText().toString();
         String Rua = ruaClient.getText().toString();
@@ -114,14 +109,14 @@ public class ConfClienteActivity extends AppCompatActivity {
 
         //Salvando os dados
         ClientDAO dao = new ClientDAO(getBaseContext());
-        ClientDAO ClientDao = new ClientDAO(this);
-        ClientAdapter adapter = new ClientAdapter(ClientDao.retornarTodos(),this);
+        ClientDAO clientDAO = new ClientDAO(this);
+        ClientAdapter adapter = new ClientAdapter(clientDAO.retornarTodos(), this);
 
         boolean sucesso;
         if (clienteEditado != null)
-            sucesso = dao.salvar(clienteEditado.getId(),Nome,Cpf,Rg,Aniversario,Telefone,Email,Rua,Numero,Bairro,Cep,Cidade,Estado);
+            sucesso = dao.salvar(clienteEditado.getId(),Nome,Aniversario,Rg,Cpf,Email,Telefone,Rua,Numero,Cep,Bairro,Cidade,Estado);
         else
-            sucesso = dao.salvar(Nome,Cpf,Rg,Aniversario,Telefone,Email                                        ,Rua,Numero,Bairro,Cep,Cidade,Estado);
+            sucesso = dao.salvar(Nome,Aniversario,Rg,Cpf,Email,Telefone,Rua,Numero,Cep,Bairro,Cidade,Estado);
 
         if (sucesso){
             Clients clients = dao.retornarUltimo();
@@ -133,9 +128,9 @@ public class ConfClienteActivity extends AppCompatActivity {
 
             //limpa os campos
             nomeClient.setText("");
+            aniversarioClient.setText("");
             rgClient.setText("");
             cpfClient.setText("");
-            aniversarioClient.setText("");
             emailClient.setText("");
             telefoneClient.setText("");
             ruaClient.setText("");
@@ -153,31 +148,12 @@ public class ConfClienteActivity extends AppCompatActivity {
                     .setAction("Action", null).show();
         }
 
-
-        Clients client = new Clients();
-
-        client.setName(nomeClient.getText().toString());
-        client.setCpf(cpfClient.getText().toString());
-        client.setRg( rgClient.getText().toString());
-        client.setAniversario(aniversarioClient.getText().toString());
-        client.setEmail(emailClient.getText().toString());
-        client.setTelefone(telefoneClient.getText().toString());
-        client.setRua(ruaClient.getText().toString());
-        client.setNumero(numeroClient.getText().toString());
-        client.setCep(cepClient.getText().toString());
-        client.setBairro(bairroClient.getText().toString());
-        client.setCidade(cidadeClient.getText().toString());
-        client.setEstado(estadoClient.getText().toString());
-
-
-
         //inseriri no banco aqui
-        clientDAO.InsertClient(client);
-        //Toast.makeText(getApplicationContext(),clientDAO.InsertClient(client).toString(), Toast.LENGTH_LONG).show();
 
     }
 
     public void cancelar(View view){
         finish();
     }
+
 }

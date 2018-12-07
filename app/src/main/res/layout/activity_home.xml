@@ -42,13 +42,13 @@
                     android:textColor="@color/colorPrimary"
                     android:textSize="29dp" />
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/imageUser"
                     android:layout_width="110dp"
                     android:layout_height="110dp"
                     android:layout_margin="10dp"
-                    android:background="@drawable/futebol"
-                    />
+                    android:src="@drawable/futebol"/>
+
 
             </LinearLayout>
 
@@ -71,36 +71,13 @@
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_margin="5dp"
-                    android:onClick="openFornecedores"
-                    android:src="@drawable/btn_fornecedores" />
-
-            </LinearLayout>
-
-
-
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp">
-
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_margin="5dp"
-                    android:onClick="openFuncionario"
-                    android:src="@drawable/btn_funcionarios" />
-
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_margin="5dp"
                     android:onClick="openProduto"
                     android:src="@drawable/btn_estoque" />
 
+
+
             </LinearLayout>
+
 
 
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -117,6 +94,33 @@
                     android:layout_margin="5dp"
                     android:onClick="openRealizarVenda"
                     android:src="@drawable/btn_realizarvendas" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="5dp"
+                    android:onClick="openFuncionario"
+                    android:src="@drawable/btn_funcionarios" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="5dp"
+                    android:onClick="openFornecedores"
+                    android:src="@drawable/btn_fornecedores" />
+
 
             </LinearLayout>
 
